@@ -2,10 +2,10 @@ package baekjoon.step_by_step;
 
 import java.util.Scanner;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
-//import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 /*
 	1330. 두 수 비교하기
@@ -33,28 +33,41 @@ public class step_02_01 {
 		else System.out.println("==");
 
 	}
+}
+
+//BufferedReader 사용
+class step_02_01_01 {
 	
-	/* public static void main(String[] args) throws IOException {
-	        
+	public static void main(String[] args) throws IOException {
+    
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
- 
- 		String str = br.readLine();
+	
+		String str = br.readLine();
 		StringTokenizer st = new StringTokenizer(str," ");
 		int A = Integer.parseInt(st.nextToken());
 		int B = Integer.parseInt(st.nextToken());
 		
 		System.out.println((A>B) ? ">" : ((A<B) ? "<" : "==" ));
-		
+	}
+}
+
+//굳이 String 변수 생성 안하고 입력과 동시에 구분자로 분리해줘도 된다.
+class step_02_01_02 {
+	public static void main(String[] args) throws IOException {
 	
-		// 굳이 String 변수 생성 안하고 입력과 동시에 구분자로 분리해줘도 된다.
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		int A = Integer.parseInt(st.nextToken());
 		int B = Integer.parseInt(st.nextToken());
 		
 		System.out.println((A>B) ? ">" : ((A<B) ? "<" : "==" )); 
-		
-		// 삼항연산자 사용
+	}
+}
+
+//삼항연산자 사용
+class step_02_01_03 {
+	public static void main(String[] args) throws IOException {
+	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		String[] str = br.readLine().split(" ");
@@ -63,6 +76,5 @@ public class step_02_01 {
 		
 		System.out.println((A>B) ? ">" : ((A<B) ? "<" : "==" ));
 
-	}*/
-
+	}
 }

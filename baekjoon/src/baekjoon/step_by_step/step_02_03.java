@@ -2,9 +2,9 @@ package baekjoon.step_by_step;
 
 import java.util.Scanner;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 /*
 	2753. 윤년
@@ -32,21 +32,27 @@ public class step_02_03 {
 			else System.out.println("1");
 		}
 		else System.out.println("0");
+	}
+	
+}
+
+//삼항연산자 사용
+class step_02_03_01 {
+	public static void main(String[] args) {
 		
-		
-		// 삼항 연산자 사용
-		/* Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		
 		int y = in.nextInt();
 		in.close();
         
-		System.out.print((y%4==0)?((y%400==0)?"1":(y%100==0)?"0":"1"):"0"); */
-
+		System.out.print((y%4==0)?((y%400==0)?"1":(y%100==0)?"0":"1"):"0");
 	}
-	
-	/* 
-	 public static void main(String[] args) throws IOException {
-        
+}
+
+//BufferedReader
+class step_02_03_02 {
+	public static void main(String[] args) throws IOException {
+	    
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
  
 		int y = Integer.parseInt(br.readLine());
@@ -60,12 +66,10 @@ public class step_02_03 {
 		
 		
 		//삼항 연산자 사용
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
 		 
-		int y = Integer.parseInt(br.readLine());
+		int y1 = Integer.parseInt(br1.readLine());
 		
-		System.out.print((y%4==0)?((y%400==0)?"1":(y%100==0)?"0":"1"):"0");
+		System.out.print((y1%4==0)?((y1%400==0)?"1":(y1%100==0)?"0":"1"):"0");
 	} 
-	*/
-
 }

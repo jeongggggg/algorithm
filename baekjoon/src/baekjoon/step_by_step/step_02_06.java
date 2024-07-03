@@ -3,10 +3,10 @@ package baekjoon.step_by_step;
 
 import java.util.Scanner;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
-//import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 /*	2525. 오븐시계
 	 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐을 사용하는 방법은 적당한 양의 오리 훈제 재료를 인공지능 오븐에 넣으면 된다. 그러면 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.
@@ -16,22 +16,50 @@ import java.util.Scanner;
 	첫째 줄에는 현재 시각이 나온다. 현재 시각은 시 A (0 ≤ A ≤ 23) 와 분 B (0 ≤ B ≤ 59)가 정수로 빈칸을 사이에 두고 순서대로 주어진다. 두 번째 줄에는 요리하는 데 필요한 시간 C (0 ≤ C ≤ 1,000)가 분 단위로 주어진다.
  */
 
-	public class step_02_06 {
+public class step_02_06 {
 
-		 Scanner in = new Scanner(System.in);
-		 
-	     int A = in.nextInt();
-	     int B = in.nextInt();
-	
-	     int C = in.nextInt();
-	
-	     int min = 60 * A + B;   // 시 -> 분
-	     min += C;
-	
-	     int hour = (min / 60) % 24;
-	     int minute = min % 60;
-	
-	     System.out.println(hour + " " + minute);
+	public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+ 
+        int A = in.nextInt();
+        int B = in.nextInt();
+ 
+        int C = in.nextInt();
+        
+        in.close();
+ 
+        int min = 60 * A + B;   // 시 -> 분
+        min += C;
+ 
+        int hour = (min / 60) % 24;
+        int minute = min % 60;
+ 
+        System.out.println(hour + " " + minute);
 	}
 
+}
+
+
+class step_02_06_01 {
+	
+	 public static void main(String[] args) throws IOException {
+	        
+	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	        
+	        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+	        int A = Integer.parseInt(st.nextToken());
+	        int B = Integer.parseInt(st.nextToken());
+	 
+	        int C = Integer.parseInt(br.readLine());
+	 
+	        int min = 60 * A + B;   // 시 -> 분
+	        min += C;
+	 
+	        int hour = (min / 60) % 24;
+	        int minute = min % 60;
+	 
+	        System.out.println(hour + " " + minute);
+	 
+	   }
 }

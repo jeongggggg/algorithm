@@ -2,9 +2,9 @@ package baekjoon.step_by_step;
 
 import java.util.Scanner;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 /*
 	14681. 사분면 고르기
@@ -48,8 +48,11 @@ public class step_02_04 {
 			}
 		}
 	}
-	
-	/* public static void main(String[] args) throws IOException {
+}
+
+class step_02_04_02 {
+
+	 public static void main(String[] args) throws IOException {
 		 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -73,5 +76,5 @@ public class step_02_04 {
 				System.out.print(3);
 			}
 		}
-	}*/
+	}
 }

@@ -31,8 +31,32 @@ import java.util.StringTokenizer;
 */
 
 public class step_02_05 {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 	    
+		Scanner in = new Scanner(System.in);
+		
+		int H = in.nextInt(); // 시
+		int M = in.nextInt(); // 분
+		in.close();
+		
+		if(M < 45) {
+			H--;		// 시(hour) 1 감소
+			M= 60 - (45 - M); 	// 분(min) 감소
+			if(H < 0) {
+				H = 23;
+			}
+			System.out.println(H + " " + M);
+		}
+		else {
+			System.out.println(H + " " + (M - 45));
+		}
+	}
+	
+}
+
+class step_02_05_2 {
+	public static void main(String[] args) throws IOException {
+    
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
  
  		String str = br.readLine();
@@ -52,27 +76,56 @@ public class step_02_05 {
 			System.out.println(H + " " + (M - 45));
 		}
 	
-/*    
-String 변수 생성 안하고 입력과 동시에 구분자로 분리해줘도 된다.
- 
+	/*    
+	String 변수 생성 안하고 입력과 동시에 구분자로 분리해줘도 된다.
+	 
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			StringTokenizer st = new StringTokenizer(br.readLine()," ");
+			int H = Integer.parseInt(st.nextToken());
+			int M = Integer.parseInt(st.nextToken());
+			
+			if(M < 45) {
+				H--;
+				M= 60 - (45 - M);
+				if(H < 0) {
+					H = 23;
+				}
+				System.out.println(H + " " + M);
+			}
+			else {
+				System.out.println(H+" "+(M-45));
+			}
+	        
+	*/
+	}
+}
+
+class step_02_05_3 {
+	
+	public static void main(String[] args) throws IOException {
+        
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		int H = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
+		StringBuilder sb = new StringBuilder();
+ 
 		if(M < 45) {
-			H--;
-			M= 60 - (45 - M);
-			if(H < 0) {
+			if(H == 0){
 				H = 23;
+				sb.append(H).append(' ');
+			} else {
+				H--;
+				sb.append(H).append(' ');
 			}
-			System.out.println(H + " " + M);
+			sb.append(M = 60 - (45 - M));
 		}
 		else {
-			System.out.println(H+" "+(M-45));
+			sb.append(H).append(' ').append(M - 45);
 		}
-        
-*/
+ 
+		System.out.println(sb);
 	}
 }
 	

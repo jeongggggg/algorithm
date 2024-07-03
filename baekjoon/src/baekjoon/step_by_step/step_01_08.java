@@ -1,10 +1,9 @@
 package baekjoon.step_by_step;
 
 import java.util.Scanner;
-
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /*
 	18108. 1998년생인 내가 태국에서는 2541년생?!
@@ -16,9 +15,9 @@ import java.util.Scanner;
 */ 
 
 
+// Scanner 사용
 public class step_01_08 {
 	
-	// Scanner 사용
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
@@ -28,18 +27,18 @@ public class step_01_08 {
 		
 		in.close();
 	}
-	
-	// BufferedReader 사용
-	/*
-	 	public static void main(String[] args) throws IOException {
-		
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			
-			String s = br.readLine();	// 한 줄을 읽고 문자열로 반환함
-			int year = Integer.parseInt(s);	// 반환 된 문자열을 정수로 바꿔줌
-			
-			System.out.println(year - 543);
-		}
-	 */
+}
 
+//BufferedReader 사용
+class step_01_08_01 {
+	
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String s = br.readLine();	// 한 줄을 읽고 문자열로 반환함
+		int year = Integer.parseInt(s);	// 반환 된 문자열을 정수로 바꿔줌
+		
+		System.out.println(year - 543);
+	}
 }

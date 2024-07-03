@@ -2,10 +2,12 @@ package baekjoon.step_by_step;
 
 import java.util.Scanner;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
-//import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 
 /*
@@ -15,10 +17,9 @@ import java.util.Scanner;
 	세 수 A, B, C가 주어졌을 때, 위의 네 가지 값을 구하는 프로그램을 작성하시오.
 */
 
+// Scanner 사용
 public class step_01_09 {
 	
-	
-	// Scanner 사용
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
@@ -34,10 +35,12 @@ public class step_01_09 {
 		System.out.println( (A%C * B%C)%C );
 
 	}
+}
 	
+
+// BufferedReader 사용 + StringTokenizer 클래스를 이용하여 분리해주는 방법
+class step_01_09_01 {
 	
-	// BufferedReader 사용 + StringTokenizer 클래스를 이용하여 분리해주는 방법
-	/*
 	public static void main(String[] args) throws IOException {
 	        
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -56,22 +59,22 @@ public class step_01_09 {
  
 			// 굳이 String 변수 생성 안하고 입력과 동시에 구분자로 분리해줘도 됨.
 	 
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			StringTokenizer st = new StringTokenizer(br.readLine()," ");
-			int A = Integer.parseInt(st.nextToken());
-			int B = Integer.parseInt(st.nextToken());
-			int C = Integer.parseInt(st.nextToken());
+			BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+			StringTokenizer st1 = new StringTokenizer(br1.readLine()," ");
+			int A1 = Integer.parseInt(st1.nextToken());
+			int B1 = Integer.parseInt(st1.nextToken());
+			int C1 = Integer.parseInt(st1.nextToken());
 	        
-			System.out.println( (A+B)%C );
-			System.out.println( (A%C + B%C)%C );
-			System.out.println( (A*B)%C );
-			System.out.println( (A%C * B%C)%C );
-		}
+			System.out.println( (A1+B1)%C1 );
+			System.out.println( (A1%C1 + B1%C1)%C1 );
+			System.out.println( (A1*B1)%C1 );
+			System.out.println( (A1%C1 * B1%C1)%C1 );
 	}
-	*/
+}
+
+// BufferedReader 사용 + br.readLine() 을 통해 읽어온 것을 split(" ") 하여 공백 단위로 나눠준 뒤 String 배열에 각각 저장하는 방법
+class step_01_09_02 {
 	
-	// BufferedReader 사용 + br.readLine() 을 통해 읽어온 것을 split(" ") 하여 공백 단위로 나눠준 뒤 String 배열에 각각 저장하는 방법
-	/*
 	 public static void main(String[] args) throws IOException {
 		     
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -87,59 +90,63 @@ public class step_01_09 {
 		System.out.println( (A%C * B%C)%C );
  
 	}
-	*/
-	
-	// BufferedReader + StringBuilder
-	/*
-		 public static void main(String[] args) throws IOException {
-			     
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			
-			StringTokenizer st = new StringTokenizer(br.readLine()," ");
-			int A = Integer.parseInt(st.nextToken());
-			int B = Integer.parseInt(st.nextToken());
-			int C = Integer.parseInt(st.nextToken());
-	        
-			StringBuilder sb = new StringBuilder();
-	 
-			sb.append( (A+B)%C );
-			sb.append('\n');
-	 
-			sb.append( (A%C + B%C)%C );
-			sb.append('\n');
-	 
-			sb.append( (A*B)%C );
-			sb.append('\n');
-	 
-			sb.append( (A%C * B%C)%C );
-	 
-			System.out.println(sb);
-	 
-		}
-	 */
-	
-	// BufferedReader + BufferedWriter
-	
-	/*
-	 	public static void main(String[] args) throws IOException {
-		     
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			
-			StringTokenizer st = new StringTokenizer(br.readLine()," ");
-			int A = Integer.parseInt(st.nextToken());
-			int B = Integer.parseInt(st.nextToken());
-			int C = Integer.parseInt(st.nextToken());
-	        
-			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	 
-			bw.write( ((A+B)%C) + "\n" );
-			bw.write( ((A%C + B%C)%C) + "\n" );
-			bw.write( ((A*B)%C) + "\n" );
-			bw.write( ((A%C * B%C)%C) + "\n" );
-	 
-			bw.flush();
-			bw.close();
- 
-		} 
-	*/
 }
+
+// BufferedReader + StringBuilder
+class step_01_09_03 {
+	
+	 public static void main(String[] args) throws IOException {
+		     
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		int A = Integer.parseInt(st.nextToken());
+		int B = Integer.parseInt(st.nextToken());
+		int C = Integer.parseInt(st.nextToken());
+        
+		StringBuilder sb = new StringBuilder();
+ 
+		sb.append( (A+B)%C );
+		sb.append('\n');
+ 
+		sb.append( (A%C + B%C)%C );
+		sb.append('\n');
+ 
+		sb.append( (A*B)%C );
+		sb.append('\n');
+ 
+		sb.append( (A%C * B%C)%C );
+ 
+		System.out.println(sb);
+ 
+	}
+}
+
+// BufferedReader + BufferedWriter
+class step_01_09_04 {
+	
+	
+	public static void main(String[] args) throws IOException {
+	     
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		int A = Integer.parseInt(st.nextToken());
+		int B = Integer.parseInt(st.nextToken());
+		int C = Integer.parseInt(st.nextToken());
+	       
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	 
+		bw.write( ((A+B)%C) + "\n" );
+		bw.write( ((A%C + B%C)%C) + "\n" );
+		bw.write( ((A*B)%C) + "\n" );
+		bw.write( ((A%C * B%C)%C) + "\n" );
+		 
+		bw.flush();
+		bw.close();
+	 
+	} 
+}
+
+
+

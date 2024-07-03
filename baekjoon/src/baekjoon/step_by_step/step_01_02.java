@@ -1,8 +1,9 @@
 package baekjoon.step_by_step;
 import java.util.Scanner;
-//import java.io.BufferedReader;
-//import java.io.IOException;
-//import java.io.InputStreamReader;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /*
 	1000. A+B
@@ -10,27 +11,31 @@ import java.util.Scanner;
 */ 
 
 
+// Scanner 사용시
 public class step_01_02 {
 	
 	public static void main(String[] args) {
-		// Scanner 사용시
 	   	Scanner scan = new Scanner(System.in);
 	       
-	       int a = scan.nextInt();
-	       int b = scan.nextInt();
-	       
-	       System.out.println(a + b);
-	       
-	       scan.close(); //new Scanner 를 System.in을 해주었기 때문에 반드시 close 를 해주어야한다
-	       
-	    //BufferedReader 사용시
-//	    BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
-//	       
-//	    int a = Integer.parseInt(buf.readLine());
-//	    int b = Integer.parseInt(buf.readLine());
-//	       
-//	    System.out.println(a + b);
+       int a = scan.nextInt();
+       int b = scan.nextInt();
+       
+       System.out.println(a + b);
+       
+       scan.close(); //new Scanner 를 System.in을 해주었기 때문에 반드시 close 를 해주어야한다      
 	}
-	
+}
 
+//BufferedReader 사용시
+class step_01_02_01 {
+	
+	 public static void main(String[] args) throws IOException{
+	       
+	    BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+	       
+	    int a = Integer.parseInt(buf.readLine());
+	    int b = Integer.parseInt(buf.readLine());
+	       
+	    System.out.println(a + b);
+	}
 }

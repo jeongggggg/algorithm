@@ -1,10 +1,9 @@
 package baekjoon.step_by_step;
 
 import java.util.Scanner;
-
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 
 /*
@@ -14,9 +13,9 @@ import java.util.Scanner;
 	놀람을 표현하는 프로그램을 작성하시오.
 */ 
 
+// Scanner 사용
 public class step_01_07 {
 	
-	// Scanner 사용
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
@@ -27,18 +26,18 @@ public class step_01_07 {
 		
 		in.close();
 	}
-	
-	//BufferedReader 사용
-	/*
-	 	public static void main(String[] args) throws IOException {
-			
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			
-			String lastString = "??!";
-			
-			String s = br.readLine();
-			System.out.println(s + lastString);
-		}
-	*/
+}
 
+//BufferedReader 사용
+class step_01_07_01 {
+	
+ 	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String lastString = "??!";
+		
+		String s = br.readLine();
+		System.out.println(s + lastString);
+	}
 }

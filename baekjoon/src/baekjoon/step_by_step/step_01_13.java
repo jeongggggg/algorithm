@@ -1,8 +1,8 @@
 package baekjoon.step_by_step;
 
-//import java.io.BufferedWriter;
-//import java.io.OutputStreamWriter;
-//import java.io.IOException;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
 
 /*
 	10172. 개
@@ -23,24 +23,24 @@ public class step_01_13 {
 		System.out.println("( 0 )\"\"\"\\");
 		System.out.println("|\"^\"`    |");
 		System.out.println("||_/=\\\\__|");     
-		
-		/* 그 외의 방법들
+	}
+
+}
+
+class step_01_13_01 {
+	public static void main(String[] args) {
 		System.out.print(
         "|\\_/|\n" + 
 		"|q p|   /}\n" + 
 		"( 0 )\"\"\"\\\n" + 
 		"|\"^\"`    |\n" + 
 		"||_/=\\\\__|");
-                         
-		System.out.printf("%s", "|\\_/|\n
-  		|q p|   /}\n
- 		( 0 )\"\"\"\\\n
-		|\"^\"`    |\n
-		||_/=\\\\__|");
-		        
-		*/
-		
-		/*
+	}
+}
+
+class step_01_13_02 {
+	public static void main(String[] args) {
+			
 		StringBuilder sb = new StringBuilder();
 		 
 		sb.append("|\\_/|\n");
@@ -50,10 +50,10 @@ public class step_01_13 {
 		sb.append("||_/=\\\\__|\n"); 
         
 		System.out.println(sb);
-		*/
 	}
-	
-	/*
+}
+
+class step_01_13_03 {
 	public static void main(String[] args) throws IOException {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
  
@@ -75,6 +75,4 @@ public class step_01_13 {
 		bw.flush();
 		bw.close();
 	}
-	*/
-
 }

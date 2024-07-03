@@ -1,9 +1,12 @@
 package baekjoon.step_by_step;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
-//import java.io.*;
-//import java.util.StringTokenizer;
+import java.io.*;
+import java.util.StringTokenizer;
 
 /*
 	11382. ²¿¸¶ Á¤¹Î
@@ -25,9 +28,11 @@ public class step_01_11 {
         System.out.println(a+b+c);
 
 	}
+}
+
+//BufferedReader »ç¿ë
+class step_01_11_01 {
 	
-	// BufferedReader »ç¿ë
-	/*
 	 public static void main(String[] args) throws IOException {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -47,6 +52,4 @@ public class step_01_11 {
         bfw.flush();
         bfw.close();
     }
-	 */
-
 }

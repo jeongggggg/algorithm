@@ -1,4 +1,4 @@
-<h1 align="center">BAEKJOON 단계별로 풀어보기 👋</h1>
+<h1>BAEKJOON 단계별로 풀어보기 👋</h1>
 <p>
 
 ## 🤝 사용언어

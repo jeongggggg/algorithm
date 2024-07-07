@@ -42,7 +42,11 @@ public class step_04_01 {
 }
 
 
-// BufferedReader로 입력받고 StringTokenizer로 띄어쓰기(공백)까지 입력받아 주었다. 뒤에 , "  " 하지 않아도 자동으로 띄어쓰기를 기준으로 파싱
+/*
+ * BufferedReader로 입력받고 StringTokenizer로 띄어쓰기(공백)까지 입력받아 주었다. 
+ * 뒤에 , "  " 하지 않아도 자동으로 띄어쓰기를 기준으로 파싱
+ * 
+*/
 class step_04_01_01 {
 
 	 public static void main(String[] args) throws IOException {

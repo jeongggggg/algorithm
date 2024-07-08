@@ -1,10 +1,87 @@
 package baekjoon.step_by_step;
+import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
+
+/*
+	10810. °ø³Ö±â
+	¹®Á¦ : µµÇöÀÌ´Â ¹Ù±¸´Ï¸¦ ÃÑ N°³ °¡Áö°í ÀÖ°í, °¢°¢ÀÇ ¹Ù±¸´Ï¿¡´Â 1¹øºÎÅÍ N¹ø±îÁö ¹øÈ£°¡ ¸Å°ÜÁ® ÀÖ´Ù. ¶Ç, 1¹øºÎÅÍ N¹ø±îÁö ¹øÈ£°¡ ÀûÇôÀÖ´Â °øÀ» ¸Å¿ì ¸¹ÀÌ °¡Áö°í ÀÖ´Ù. 
+	°¡Àå Ã³À½ ¹Ù±¸´Ï¿¡´Â °øÀÌ µé¾îÀÖÁö ¾ÊÀ¸¸ç, ¹Ù±¸´Ï¿¡´Â °øÀ» 1°³¸¸ ³ÖÀ» ¼ö ÀÖ´Ù.
+	µµÇöÀÌ´Â ¾ÕÀ¸·Î M¹ø °øÀ» ³ÖÀ¸·Á°í ÇÑ´Ù. 
+	µµÇöÀÌ´Â ÇÑ ¹ø °øÀ» ³ÖÀ» ¶§, °øÀ» ³ÖÀ» ¹Ù±¸´Ï ¹üÀ§¸¦ Á¤ÇÏ°í, 
+	Á¤ÇÑ ¹Ù±¸´Ï¿¡ ¸ðµÎ °°Àº ¹øÈ£°¡ ÀûÇôÀÖ´Â °øÀ» ³Ö´Â´Ù. 
+	¸¸¾à, ¹Ù±¸´Ï¿¡ °øÀÌ ÀÌ¹Ì ÀÖ´Â °æ¿ì¿¡´Â µé¾îÀÖ´Â °øÀ» »©°í, 
+	»õ·Î °øÀ» ³Ö´Â´Ù. °øÀ» ³ÖÀ» ¹Ù±¸´Ï´Â ¿¬¼ÓµÇ¾î ÀÖ¾î¾ß ÇÑ´Ù.
+	°øÀ» ¾î¶»°Ô ³ÖÀ»Áö°¡ ÁÖ¾îÁ³À» ¶§, 
+	M¹ø °øÀ» ³ÖÀº ÀÌÈÄ¿¡ °¢ ¹Ù±¸´Ï¿¡ ¾î¶² °øÀÌ µé¾î ÀÖ´ÂÁö ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	
+	ÀÔ·Â : Ã¹Â° ÁÙ¿¡ N (1 ¡Â N ¡Â 100)°ú M (1 ¡Â M ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù.
+	µÑÂ° ÁÙºÎÅÍ M°³ÀÇ ÁÙ¿¡ °ÉÃÄ¼­ °øÀ» ³Ö´Â ¹æ¹ýÀÌ ÁÖ¾îÁø´Ù. 
+	°¢ ¹æ¹ýÀº ¼¼ Á¤¼ö i j k·Î ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, i¹ø ¹Ù±¸´ÏºÎÅÍ j¹ø ¹Ù±¸´Ï±îÁö¿¡ 
+	k¹ø ¹øÈ£°¡ ÀûÇôÁ® ÀÖ´Â °øÀ» ³Ö´Â´Ù´Â ¶æÀÌ´Ù. 
+	¿¹¸¦ µé¾î, 2 5 6Àº 2¹ø ¹Ù±¸´ÏºÎÅÍ 5¹ø ¹Ù±¸´Ï±îÁö¿¡ 6¹ø °øÀ» ³Ö´Â´Ù´Â ¶æÀÌ´Ù. (1 ¡Â i ¡Â j ¡Â N, 1 ¡Â k ¡Â N)
+	µµÇöÀÌ´Â ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø ¼ø¼­´ë·Î °øÀ» ³Ö´Â´Ù.
+	
+	Ãâ·Â : 1¹ø ¹Ù±¸´ÏºÎÅÍ N¹ø ¹Ù±¸´Ï¿¡ µé¾îÀÖ´Â °øÀÇ ¹øÈ£¸¦ °ø¹éÀ¸·Î ±¸ºÐÇØ Ãâ·ÂÇÑ´Ù. 
+	°øÀÌ µé¾îÀÖÁö ¾ÊÀº ¹Ù±¸´Ï´Â 0À» Ãâ·ÂÇÑ´Ù.
+*/
 
 public class step_04_05 {
 
 	public static void main(String[] args) {
-		// ì»¤ë°‹ì´ì´ìƒí•˜ë„¤..,.......
+		Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        int M = sc.nextInt();
+
+        for(int i = 0; i < M; i++) {
+            int I = sc.nextInt();
+            int J = sc.nextInt();
+            int K = sc.nextInt();
+
+            for(int j = I - 1; j < J; j++) {
+                arr[j] = K;
+            }
+        }
+        for(int k = 0; k < arr.length; k++) {
+            System.out.print(arr[k] + " ");
+        }
 
 	}
+
+}
+
+class step_04_05_01 {
+
+	public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        StringTokenizer st = new StringTokenizer(br.readLine()); // StringTokenizer·Î N°ú M, " "(°ø¹é)À¸·Î ±¸ºÐ
+
+        int N = Integer.parseInt(st.nextToken());
+        int[] arr = new int[N];
+        int M = Integer.parseInt(st.nextToken());
+
+        for(int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());			 // StringTokenizer·Î " "(°ø¹é)À¸·Î ±¸ºÐ
+														
+            int I = Integer.parseInt(st.nextToken());
+            int J = Integer.parseInt(st.nextToken());
+            int K = Integer.parseInt(st.nextToken());
+
+            for(int j = I - 1; j < J; j++) {
+                arr[j] = K;
+            }
+        }
+        for(int k = 0; k < arr.length; k++) {
+            bw.write(arr[k] + " ");
+        }
+        br.close();
+        bw.flush();
+        bw.close();
+    }
 
 }

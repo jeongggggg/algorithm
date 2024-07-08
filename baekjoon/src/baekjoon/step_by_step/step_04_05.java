@@ -30,6 +30,8 @@ public class step_04_05 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
+		sc.close();
 
         int N = sc.nextInt();
         int[] arr = new int[N];

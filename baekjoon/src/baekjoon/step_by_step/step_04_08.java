@@ -54,7 +54,7 @@ class step_04_08_01 {
 
 }
 
-// 배열 사
+// 배열 사용
 class step_04_08_02 {
 
 	public static void main(String[] args) throws IOException {

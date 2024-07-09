@@ -54,6 +54,7 @@ class step_04_08_01 {
 
 }
 
+// ¹è¿­ »ç
 class step_04_08_02 {
 
 	public static void main(String[] args) throws IOException {

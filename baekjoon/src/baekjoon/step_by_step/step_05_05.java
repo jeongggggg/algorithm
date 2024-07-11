@@ -78,6 +78,7 @@ class step_05_05_02 {
 		 
 		Scanner in = new Scanner(System.in);
 		in.nextInt();
+		in.close();
 		
 		int sum = 0;
 		

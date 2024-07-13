@@ -1,5 +1,9 @@
 package baekjoon.step_by_step;
 
+/*
+ 	25083. 새싹
+*/
+
 public class step_06_01 {
 
 	public static void main(String[] args) {

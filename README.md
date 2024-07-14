@@ -1,7 +1,6 @@
 <h1>Algorithm👋</h1>
 
 ## ✅ BAEKJOON 단계별로 풀어보기
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dejeong)](https://solved.ac/dejeong/) ![mazandi profile](http://mazandi.herokuapp.com/api?handle=dejeong&theme=dark)
 
 ## ✅ 사용언어
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>

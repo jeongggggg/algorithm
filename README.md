@@ -1,5 +1,4 @@
-<h1>Algorithm 연습 👋</h1>
-<p>
+<h1>Algorithm👋</h1>
 
 ## ✅ BAEKJOON 단계별로 풀어보기
 
@@ -13,4 +12,6 @@
 
 ***
 
-📍[dejeong velog](https://velog.io/@dejeong/posts) ➡️ 공부 내용 간단하게 정리 중📍
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dejeong)](https://solved.ac/dejeong/) ![mazandi profile](http://mazandi.herokuapp.com/api?handle=dejeong&theme=dark)
+
+[![Velog Badge](http://img.shields.io/badge/Velog-white?style=flat-square&logo=Velog&link=https://velog.io/@dejeong/)](https://velog.io/@dejeong)

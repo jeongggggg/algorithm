@@ -1,10 +1,10 @@
 <h1>Algorithm 연습 👋</h1>
 <p>
 
-## 🤝 BAEKJOON 단계별로 풀어보기
+## ✅ BAEKJOON 단계별로 풀어보기
 
-## 🤝 사용언어
-<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=OpenJDK&logoColor=white"/>
+## ✅ 사용언어
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
 
 ## 📝 목표
 

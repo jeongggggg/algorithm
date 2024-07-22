@@ -16,7 +16,7 @@ import java.io.IOException;
 	입력으로 주어진 방까지 최소 개수의 방을 지나서 갈 때 몇 개의 방을 지나는지 출력한다.
 */
 
-//N = 1 일 때는 1 개의 방을, N = 2 일 때는 2 개의 방을, ⋯ 이런식으로 N 번 까지 갈 때 최소 개 수의 루트로 방을 방문하면 되는 것 
+// N = 1 일 때는 1 개의 방을, N = 2 일 때는 2 개의 방을, ⋯ 이런식으로 N 번 까지 갈 때 최소 개 수의 루트로 방을 방문하면 되는 것 
 // 방 개수는 6개씩 늘어난다. 
 
 
@@ -29,6 +29,8 @@ public class step_08_05 {
 	public static void main(String[] args) {
 		 
 		Scanner in = new Scanner(System.in);
+		
+		in.close();
  
 		int N = in.nextInt();
 		int count = 1; // 겹 수(최소 루트)

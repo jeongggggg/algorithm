@@ -14,8 +14,7 @@ import java.io.InputStreamReader;
 	- 1 ≦ B ≦ 100.
 	- A, B 는 정수이다.
 */
-
-public class step_09_07 {
+public class step_10_01 {
 
 	public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

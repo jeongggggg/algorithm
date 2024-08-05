@@ -31,26 +31,22 @@ import java.util.StringTokenizer;
 public class step_10_08 {
 
 	 public static void main(String[] args) throws IOException {
-
 	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	        StringTokenizer st = new StringTokenizer(br.readLine());
 
-	        // 입력된 세 정수를 파싱하여 변수에 저장
 	        int a = Integer.parseInt(st.nextToken());
 	        int b = Integer.parseInt(st.nextToken());
 	        int c = Integer.parseInt(st.nextToken());
 
-	        // 세 정수 중 최대 값을 찾기
-	        int maxN = Math.max(a, Math.max(b, c));
-
-	        // 나머지 두 수의 합이 최대 값보다 큰지 확인
-	        if (a + b + c - maxN > maxN) {
-	            // 조건이 참인 경우, 세 수의 합을 출력
-	            System.out.println(a + b + c);
-	        } else {
-	            // 조건이 거짓인 경우, 특정 수식을 통해 값을 계산하여 출력
-	            System.out.print((a + b + c - maxN) * 2 - 1);
+	        int maxN = 0;
+	        if(a>b){
+	            if(b>c) maxN = a;
+	            else maxN = (a>c) ? a : c;
 	        }
+	        else maxN = (b>c) ? b : c;
+
+	        if(a+b+c-maxN > maxN) System.out.println(a+b+c);
+	        else System.out.print((a+b+c-maxN)*2-1);
 
 	        br.close();
 	    }

@@ -39,6 +39,8 @@ public class step_11_08 {
                 System.out.println(0);
             }
         }
+        
+        sc.close();
     }
 }
 

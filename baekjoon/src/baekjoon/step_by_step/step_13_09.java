@@ -48,3 +48,36 @@ public class step_13_09 {
         bw.close();
     }
 }
+
+class step_13_19_01 {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+			int N = scanner.nextInt();
+			scanner.nextLine(); // 개행 문자 제거
+			
+			// 단어들을 담을 Set (중복 제거를 위해 HashSet 사용)
+			Set<String> wordSet = new HashSet<>();
+			
+			for (int i = 0; i < N; i++) {
+			    wordSet.add(scanner.nextLine());
+			}
+			
+			// Set을 List로 변환
+			List<String> wordList = new ArrayList<>(wordSet);
+			
+			// 정렬 (길이 -> 사전 순)
+			Collections.sort(wordList, (word1, word2) -> {
+			    if (word1.length() != word2.length()) {
+			        return word1.length() - word2.length(); // 길이 기준 오름차순
+			    } else {
+			        return word1.compareTo(word2); // 사전순
+			    }
+			});
+			
+			// 결과 출력
+			for (String word : wordList) {
+			    System.out.println(word);
+			}
+		}
+    }
+}

@@ -8,20 +8,20 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 /*
-	2562. ÃÖ´ñ°ª
-	¹®Á¦ :9°³ÀÇ ¼­·Î ´Ù¸¥ ÀÚ¿¬¼ö°¡ ÁÖ¾îÁú ¶§, ÀÌµé Áß ÃÖ´ñ°ªÀ» Ã£°í ±× ÃÖ´ñ°ªÀÌ ¸î ¹øÂ° ¼öÀÎÁö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	¿¹¸¦ µé¾î, ¼­·Î ´Ù¸¥ 9°³ÀÇ ÀÚ¿¬¼ö 3, 29, 38, 12, 57, 74, 40, 85, 61 ÀÌ ÁÖ¾îÁö¸é, 
-	ÀÌµé Áß ÃÖ´ñ°ªÀº 85ÀÌ°í, ÀÌ °ªÀº 8¹øÂ° ¼öÀÌ´Ù.
+	2562. ìµœëŒ“ê°’
+	ë¬¸ì œ :9ê°œì˜ ì„œë¡œ ë‹¤ë¥¸ ìžì—°ìˆ˜ê°€ ì£¼ì–´ì§ˆ ë•Œ, ì´ë“¤ ì¤‘ ìµœëŒ“ê°’ì„ ì°¾ê³  ê·¸ ìµœëŒ“ê°’ì´ ëª‡ ë²ˆì§¸ ìˆ˜ì¸ì§€ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ì˜ˆë¥¼ ë“¤ì–´, ì„œë¡œ ë‹¤ë¥¸ 9ê°œì˜ ìžì—°ìˆ˜ 3, 29, 38, 12, 57, 74, 40, 85, 61 ì´ ì£¼ì–´ì§€ë©´, 
+	ì´ë“¤ ì¤‘ ìµœëŒ“ê°’ì€ 85ì´ê³ , ì´ ê°’ì€ 8ë²ˆì§¸ ìˆ˜ì´ë‹¤.
 	
-	ÀÔ·Â :Ã¹Â° ÁÙºÎÅÍ ¾ÆÈ© ¹øÂ° ÁÙ±îÁö ÇÑ ÁÙ¿¡ ÇÏ³ªÀÇ ÀÚ¿¬¼ö°¡ ÁÖ¾îÁø´Ù. ÁÖ¾îÁö´Â ÀÚ¿¬¼ö´Â 100 º¸´Ù ÀÛ´Ù.
+	ìž…ë ¥ :ì²«ì§¸ ì¤„ë¶€í„° ì•„í™‰ ë²ˆì§¸ ì¤„ê¹Œì§€ í•œ ì¤„ì— í•˜ë‚˜ì˜ ìžì—°ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì£¼ì–´ì§€ëŠ” ìžì—°ìˆ˜ëŠ” 100 ë³´ë‹¤ ìž‘ë‹¤.
 	
-	Ãâ·Â : Ã¹Â° ÁÙ¿¡ ÃÖ´ñ°ªÀ» Ãâ·ÂÇÏ°í, µÑÂ° ÁÙ¿¡ ÃÖ´ñ°ªÀÌ ¸î ¹øÂ° ¼öÀÎÁö¸¦ Ãâ·ÂÇÑ´Ù.
+	ì¶œë ¥ : ì²«ì§¸ ì¤„ì— ìµœëŒ“ê°’ì„ ì¶œë ¥í•˜ê³ , ë‘˜ì§¸ ì¤„ì— ìµœëŒ“ê°’ì´ ëª‡ ë²ˆì§¸ ìˆ˜ì¸ì§€ë¥¼ ì¶œë ¥í•œë‹¤.
 */
 
-/*  Scanner + ¹è¿­ O
-   	ÀÔ·Â °³¼ö´Â 9°³·Î °íÁ¤µÇ¾îÀÖÀ¸´Ï ¹è¿­ ¼±¾ð°ú ÇÔ²² À§¿Í°°ÀÌ ¹Ù·Î ÀÔ·ÂÀ¸·Î ÃÊ±âÈ­ÇØÁÖ¾îµµ ¹«¹æ
-	¶ÇÇÑ for-each ±¸¹®À¸·Î ¹è¿­ÀÇ ¿ø¼Ò¸¦ ÇÏ³ª¾¿ value ¿¡ ÀúÀåÇÑ µÚ 
-	final_value ¿Í value °ªÀ» ºñ±³ÇÏ¿© value °¡ final_value º¸´Ù Å©¸é count °ª°ú value °ªÀ» °¢°¢ ÀúÀåÇÑ´Ù.
+/*  Scanner + ë°°ì—´ O
+   	ìž…ë ¥ ê°œìˆ˜ëŠ” 9ê°œë¡œ ê³ ì •ë˜ì–´ìžˆìœ¼ë‹ˆ ë°°ì—´ ì„ ì–¸ê³¼ í•¨ê»˜ ìœ„ì™€ê°™ì´ ë°”ë¡œ ìž…ë ¥ìœ¼ë¡œ ì´ˆê¸°í™”í•´ì£¼ì–´ë„ ë¬´ë°©
+	ë˜í•œ for-each êµ¬ë¬¸ìœ¼ë¡œ ë°°ì—´ì˜ ì›ì†Œë¥¼ í•˜ë‚˜ì”© value ì— ì €ìž¥í•œ ë’¤ 
+	final_value ì™€ value ê°’ì„ ë¹„êµí•˜ì—¬ value ê°€ final_value ë³´ë‹¤ í¬ë©´ count ê°’ê³¼ value ê°’ì„ ê°ê° ì €ìž¥í•œë‹¤.
 */
 public class step_04_04 {
 
@@ -50,9 +50,9 @@ public class step_04_04 {
 
 }
 
-// ¹è¿­ÀÇ ¿ø¼Ò¸¦ °Ë»çÇÏÁö ¾Ê°í ¸Þ¼Òµå¸¦ ÀÌ¿ë
-// Collections Å¬·¡½ºÀÇ max() ¸Þ¼Òµå¸¦ »ç¿ëÇØ¾ßÇÏ´Âµ¥, ÁÖÀÇÇÒ Á¡Àº ¸®½ºÆ® Å¸ÀÔ¸¸ ¹Þ´Â´Ù´Â °Í
-// List ·Î ¸¸µç µÚ Collections Å¬·¡½ºÀÇ max ¸Þ¼Òµå¸¦ ÅëÇØ °ªÀ» ÀúÀåÇÑ µÚ, ÇØ´ç °ªÀÌ ÀÖ´Â index¸¦ Ã£¾Æ +1 (Ã¹ ¹øÂ° index °¡ 0 ÀÌ¹Ç·Î)
+// ë°°ì—´ì˜ ì›ì†Œë¥¼ ê²€ì‚¬í•˜ì§€ ì•Šê³  ë©”ì†Œë“œë¥¼ ì´ìš©
+// Collections í´ëž˜ìŠ¤ì˜ max() ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•´ì•¼í•˜ëŠ”ë°, ì£¼ì˜í•  ì ì€ ë¦¬ìŠ¤íŠ¸ íƒ€ìž…ë§Œ ë°›ëŠ”ë‹¤ëŠ” ê²ƒ
+// List ë¡œ ë§Œë“  ë’¤ Collections í´ëž˜ìŠ¤ì˜ max ë©”ì†Œë“œë¥¼ í†µí•´ ê°’ì„ ì €ìž¥í•œ ë’¤, í•´ë‹¹ ê°’ì´ ìžˆëŠ” indexë¥¼ ì°¾ì•„ +1 (ì²« ë²ˆì§¸ index ê°€ 0 ì´ë¯€ë¡œ)
 class step_04_04_01 {
 	
 	public static void main(String[] args) {
@@ -74,7 +74,7 @@ class step_04_04_01 {
 	
 }
 
-// BufferedReader + ¹è¿­ O 
+// BufferedReader + ë°°ì—´ O 
 class step_04_04_02 {
 	
 public static void main(String[] args) throws IOException {
@@ -107,7 +107,7 @@ public static void main(String[] args) throws IOException {
 	
 }
 
-// BufferedReader + ¹è¿­ X
+// BufferedReader + ë°°ì—´ X
 class step_04_04_03 {
 	
 	public static void main(String[] args) throws IOException {

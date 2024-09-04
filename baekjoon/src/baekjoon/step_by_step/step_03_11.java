@@ -7,14 +7,14 @@ import java.util.StringTokenizer;
 
 /*
 	10952. A+B - 5
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ÞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	ÀÔ·ÂÀº ¿©·¯ °³ÀÇ Å×½ºÆ® ÄÉÀÌ½º·Î ÀÌ·ç¾îÁ® ÀÖ´Ù.
-	°¢ Å×½ºÆ® ÄÉÀÌ½º´Â ÇÑ ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, °¢ ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. (0 < A, B < 10)
-	ÀÔ·ÂÀÇ ¸¶Áö¸·¿¡´Â 0 µÎ °³°¡ µé¾î¿Â´Ù.
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ìž…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ìž…ë ¥ì€ ì—¬ëŸ¬ ê°œì˜ í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë¡œ ì´ë£¨ì–´ì ¸ ìžˆë‹¤.
+	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìžˆìœ¼ë©°, ê° ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+	ìž…ë ¥ì˜ ë§ˆì§€ë§‰ì—ëŠ” 0 ë‘ ê°œê°€ ë“¤ì–´ì˜¨ë‹¤.
 */
 
 
-// while ( true ) ·Î ¹«ÇÑ ¹Ýº¹ ÇÏ¸é¼­ ¸¸¾à A ¿Í B °¡ µÑ ´Ù 0 ÀÏ°æ¿ì break; ¸¦ ÅëÇØ ¹Ýº¹¹®À» Á¾·áÇØÁÖ°í, ¾Æ´Ò°æ¿ì ÀÔ·Â¹ÞÀº A ¿Í B ¸¦ ´õÇØÁØ´Ù.
+// while ( true ) ë¡œ ë¬´í•œ ë°˜ë³µ í•˜ë©´ì„œ ë§Œì•½ A ì™€ B ê°€ ë‘˜ ë‹¤ 0 ì¼ê²½ìš° break; ë¥¼ í†µí•´ ë°˜ë³µë¬¸ì„ ì¢…ë£Œí•´ì£¼ê³ , ì•„ë‹ê²½ìš° ìž…ë ¥ë°›ì€ A ì™€ B ë¥¼ ë”í•´ì¤€ë‹¤.
 public class step_03_11 {
 
 	public static void main(String[] args) {
@@ -38,16 +38,16 @@ public class step_03_11 {
 }
 
 /*
- * BufferedReader.readLine() À» ÅëÇØ ÀÔ·Â ¹Þ°Ô µÇ´Âµ¥, 
- * ÀÌ´Â ¹®ÀÚ¿­ ÇÑ ÁÙÀ» ÇÑ ¹ø¿¡ ÀÔ·Â¹Þ±â ¶§¹®¿¡ °ø¹é±îÁö ÀÔ·ÂµÇ¾î¹ö¸°´Ù. 
- * ±×·¸±â ¶§¹®¿¡ °ø¹éÀ» ±âÁØÀ¸·Î ¹®ÀÚ¿­À» ºÐ¸®ÇØÁÖ¾î¾ß ÇÑ´Ù.
+ * BufferedReader.readLine() ì„ í†µí•´ ìž…ë ¥ ë°›ê²Œ ë˜ëŠ”ë°, 
+ * ì´ëŠ” ë¬¸ìžì—´ í•œ ì¤„ì„ í•œ ë²ˆì— ìž…ë ¥ë°›ê¸° ë•Œë¬¸ì— ê³µë°±ê¹Œì§€ ìž…ë ¥ë˜ì–´ë²„ë¦°ë‹¤. 
+ * ê·¸ë ‡ê¸° ë•Œë¬¸ì— ê³µë°±ì„ ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìžì—´ì„ ë¶„ë¦¬í•´ì£¼ì–´ì•¼ í•œë‹¤.
  * 
- * ¹®ÀÚ¿­ ºÐ¸® ¹æ¹ý¿¡´Â
- * String.split() À» ÅëÇØ ºÐ¸®ÇØÁÖ´Â ¹æ¹ý, 
- * StringTokenizer ·Î ºÐ¸®µÇ¾î ÀúÀåÇÏ¸é¼­ ²¨³»¿À´Â ¹æ¹ýÀÌ ÀÖ´Ù
+ * ë¬¸ìžì—´ ë¶„ë¦¬ ë°©ë²•ì—ëŠ”
+ * String.split() ì„ í†µí•´ ë¶„ë¦¬í•´ì£¼ëŠ” ë°©ë²•, 
+ * StringTokenizer ë¡œ ë¶„ë¦¬ë˜ì–´ ì €ìž¥í•˜ë©´ì„œ êº¼ë‚´ì˜¤ëŠ” ë°©ë²•ì´ ìžˆë‹¤
  * 
- * StringTokenizer À» ÅëÇØ ¹®ÀÚ¿­ ºÐ¸®ÇÑ µÚ ²¨³»¿À´Â ¸Þ¼Òµå, 
- * st.nextToken() Àº ¹®ÀÚ¿­À» ¹ÝÈ¯ÇÏ´Ï Integer.parseInt()·Î int ÇüÀ¸·Î º¯È¯½ÃÄÑÁÖ¾î¾ß ÇÑ´Ù
+ * StringTokenizer ì„ í†µí•´ ë¬¸ìžì—´ ë¶„ë¦¬í•œ ë’¤ êº¼ë‚´ì˜¤ëŠ” ë©”ì†Œë“œ, 
+ * st.nextToken() ì€ ë¬¸ìžì—´ì„ ë°˜í™˜í•˜ë‹ˆ Integer.parseInt()ë¡œ int í˜•ìœ¼ë¡œ ë³€í™˜ì‹œì¼œì£¼ì–´ì•¼ í•œë‹¤
  * 
 */
 class step_03_11_01 {
@@ -76,8 +76,8 @@ class step_03_11_01 {
 }
 
 /*
- * ÀÔ·Â¹æ¹ýÀÌ ÇÑ ÀÚ¸® ¼öÀÌ´Ï °ø¹éÀÇ À§Ä¡´Â °íÁ¤ÀÌ¶ó´Â Á¡À» ÀÌ¿ëÇÏ¿© Ç® ¼öµµ ÀÖ´Ù.
- * ¶ÇÇÑ StringTokenizer À» °è¼Ó »ý¼ºÇØÁÙ ÇÊ¿ä ¾øÀ¸´Ï ¼º´É Ãø¸é¿¡¼­ Á» ´õ ÀÌÁ¡À» º¸ÀÏ °Í
+ * ìž…ë ¥ë°©ë²•ì´ í•œ ìžë¦¬ ìˆ˜ì´ë‹ˆ ê³µë°±ì˜ ìœ„ì¹˜ëŠ” ê³ ì •ì´ë¼ëŠ” ì ì„ ì´ìš©í•˜ì—¬ í’€ ìˆ˜ë„ ìžˆë‹¤.
+ * ë˜í•œ StringTokenizer ì„ ê³„ì† ìƒì„±í•´ì¤„ í•„ìš” ì—†ìœ¼ë‹ˆ ì„±ëŠ¥ ì¸¡ë©´ì—ì„œ ì¢€ ë” ì´ì ì„ ë³´ì¼ ê²ƒ
  * 
 */
 class step_03_11_02 {

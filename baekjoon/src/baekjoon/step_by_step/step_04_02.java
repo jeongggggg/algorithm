@@ -6,18 +6,18 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 /*
-	10871. Xº¸´Ù ÀÛÀº ¼ö
-	¹®Á¦ : Á¤¼ö N°³·Î ÀÌ·ç¾îÁø ¼ö¿­ A¿Í Á¤¼ö X°¡ ÁÖ¾îÁø´Ù. 
-	ÀÌ¶§, A¿¡¼­ Xº¸´Ù ÀÛÀº ¼ö¸¦ ¸ðµÎ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	10871. Xë³´ë‹¤ ìž‘ì€ ìˆ˜
+	ë¬¸ì œ : ì •ìˆ˜ Nê°œë¡œ ì´ë£¨ì–´ì§„ ìˆ˜ì—´ Aì™€ ì •ìˆ˜ Xê°€ ì£¼ì–´ì§„ë‹¤. 
+	ì´ë•Œ, Aì—ì„œ Xë³´ë‹¤ ìž‘ì€ ìˆ˜ë¥¼ ëª¨ë‘ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	ÀÔ·Â : Ã¹Â° ÁÙ¿¡ N°ú X°¡ ÁÖ¾îÁø´Ù. (1 ¡Â N, X ¡Â 10,000)
-	µÑÂ° ÁÙ¿¡ ¼ö¿­ A¸¦ ÀÌ·ç´Â Á¤¼ö N°³°¡ ÁÖ¾îÁø´Ù. 
-	ÁÖ¾îÁö´Â Á¤¼ö´Â ¸ðµÎ 1º¸´Ù Å©°Å³ª °°°í, 10,000º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
+	ìž…ë ¥ : ì²«ì§¸ ì¤„ì— Nê³¼ Xê°€ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ N, X â‰¤ 10,000)
+	ë‘˜ì§¸ ì¤„ì— ìˆ˜ì—´ Aë¥¼ ì´ë£¨ëŠ” ì •ìˆ˜ Nê°œê°€ ì£¼ì–´ì§„ë‹¤. 
+	ì£¼ì–´ì§€ëŠ” ì •ìˆ˜ëŠ” ëª¨ë‘ 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 10,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
 	
-	Ãâ·Â : Xº¸´Ù ÀÛÀº ¼ö¸¦ ÀÔ·Â¹ÞÀº ¼ø¼­´ë·Î °ø¹éÀ¸·Î ±¸ºÐÇØ Ãâ·ÂÇÑ´Ù. Xº¸´Ù ÀÛÀº ¼ö´Â Àû¾îµµ ÇÏ³ª Á¸ÀçÇÑ´Ù.
+	ì¶œë ¥ : Xë³´ë‹¤ ìž‘ì€ ìˆ˜ë¥¼ ìž…ë ¥ë°›ì€ ìˆœì„œëŒ€ë¡œ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤. Xë³´ë‹¤ ìž‘ì€ ìˆ˜ëŠ” ì ì–´ë„ í•˜ë‚˜ ì¡´ìž¬í•œë‹¤.
 */
 
-// ¹è¿­¿¡ ÀÔ·Â¹ÞÀº ¼ö¿­À» ´Ù ÀúÀåÇÑ µÚ ´Ù½Ã ÇÑ ¹ø ¹Ýº¹¹®À¸·Î ¹è¿­À» °Ë»çÇÏ¿© Á¶°Ç¹®¿¡ µû¶ó Ãâ·Â
+// ë°°ì—´ì— ìž…ë ¥ë°›ì€ ìˆ˜ì—´ì„ ë‹¤ ì €ìž¥í•œ ë’¤ ë‹¤ì‹œ í•œ ë²ˆ ë°˜ë³µë¬¸ìœ¼ë¡œ ë°°ì—´ì„ ê²€ì‚¬í•˜ì—¬ ì¡°ê±´ë¬¸ì— ë”°ë¼ ì¶œë ¥
 public class step_04_02 {
 
 	public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class step_04_02 {
 	}
 }
 
-// ¹è¿­ »ç¿ë X, ÀÔ·Â¹ÞÀ½°ú µ¿½Ã¿¡ if ¹®À¸·Î °Ë»çÇØ¼­ ÁÖ¾îÁø ¼ö º¸´Ù ÀÛÀº °æ¿ì StringBuilder ¿¡ ÀúÀåÇØÁÖ´Â ¹æ¹ý
+// ë°°ì—´ ì‚¬ìš© X, ìž…ë ¥ë°›ìŒê³¼ ë™ì‹œì— if ë¬¸ìœ¼ë¡œ ê²€ì‚¬í•´ì„œ ì£¼ì–´ì§„ ìˆ˜ ë³´ë‹¤ ìž‘ì€ ê²½ìš° StringBuilder ì— ì €ìž¥í•´ì£¼ëŠ” ë°©ë²•
 class step_04_02_01 {
 	
 	public static void main(String[] args) {
@@ -64,7 +64,7 @@ class step_04_02_01 {
 	}
 }
 
-// BufferedReader ·Î ÀÔ·Â¹Þ´Â¸¸Å­ ¹®ÀÚ¿­ ºÐ¸®¸¦ ÇØÁÖ¾î¾ß ÇÏ±â ¶§¹®¿¡ StringTokenizer ¶ÇÇÑ ÇÊ¿ä
+// BufferedReader ë¡œ ìž…ë ¥ë°›ëŠ”ë§Œí¼ ë¬¸ìžì—´ ë¶„ë¦¬ë¥¼ í•´ì£¼ì–´ì•¼ í•˜ê¸° ë•Œë¬¸ì— StringTokenizer ë˜í•œ í•„ìš”
 class step_04_02_02 {
 	
 	public static void main(String[] args) throws IOException {

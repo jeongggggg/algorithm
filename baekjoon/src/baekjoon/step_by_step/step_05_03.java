@@ -6,22 +6,22 @@ import java.io.InputStreamReader;
 
 
 /*
-	9086.¹®ÀÚ¿­  
-	¹®ÀÚ¿­À» ÀÔ·ÂÀ¸·Î ÁÖ¸é ¹®ÀÚ¿­ÀÇ Ã¹ ±ÛÀÚ¿Í ¸¶Áö¸· ±ÛÀÚ¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	9086.ë¬¸ìžì—´  
+	ë¬¸ìžì—´ì„ ìž…ë ¥ìœ¼ë¡œ ì£¼ë©´ ë¬¸ìžì—´ì˜ ì²« ê¸€ìžì™€ ë§ˆì§€ë§‰ ê¸€ìžë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	ÀÔ·ÂÀÇ Ã¹ ÁÙ¿¡´Â Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö T(1 ¡Â T ¡Â 10)°¡ ÁÖ¾îÁø´Ù. 
-	°¢ Å×½ºÆ® ÄÉÀÌ½º´Â ÇÑ ÁÙ¿¡ ÇÏ³ªÀÇ ¹®ÀÚ¿­ÀÌ ÁÖ¾îÁø´Ù. 
-	¹®ÀÚ¿­Àº ¾ËÆÄºª A~Z ´ë¹®ÀÚ·Î ÀÌ·ç¾îÁö¸ç ¾ËÆÄºª »çÀÌ¿¡ °ø¹éÀº ¾øÀ¸¸ç ¹®ÀÚ¿­ÀÇ ±æÀÌ´Â 1000º¸´Ù ÀÛ´Ù.
+	ìž…ë ¥ì˜ ì²« ì¤„ì—ëŠ” í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ T(1 â‰¤ T â‰¤ 10)ê°€ ì£¼ì–´ì§„ë‹¤. 
+	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ì— í•˜ë‚˜ì˜ ë¬¸ìžì—´ì´ ì£¼ì–´ì§„ë‹¤. 
+	ë¬¸ìžì—´ì€ ì•ŒíŒŒë²³ A~Z ëŒ€ë¬¸ìžë¡œ ì´ë£¨ì–´ì§€ë©° ì•ŒíŒŒë²³ ì‚¬ì´ì— ê³µë°±ì€ ì—†ìœ¼ë©° ë¬¸ìžì—´ì˜ ê¸¸ì´ëŠ” 1000ë³´ë‹¤ ìž‘ë‹¤.
 	
-	°¢ Å×½ºÆ® ÄÉÀÌ½º¿¡ ´ëÇØ¼­ ÁÖ¾îÁø ¹®ÀÚ¿­ÀÇ Ã¹ ±ÛÀÚ¿Í ¸¶Áö¸· ±ÛÀÚ¸¦ ¿¬¼ÓÇÏ¿© Ãâ·ÂÇÑ´Ù.
+	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì— ëŒ€í•´ì„œ ì£¼ì–´ì§„ ë¬¸ìžì—´ì˜ ì²« ê¸€ìžì™€ ë§ˆì§€ë§‰ ê¸€ìžë¥¼ ì—°ì†í•˜ì—¬ ì¶œë ¥í•œë‹¤.
 */
 
 /*
-¹®ÀÚ¿­À» ³ª´­ ¼ö ÀÖ´Â subString ÇÔ¼ö´Â 2°¡Áö°¡ ÀÖ´Âµ¥
+ë¬¸ìžì—´ì„ ë‚˜ëˆŒ ìˆ˜ ìžˆëŠ” subString í•¨ìˆ˜ëŠ” 2ê°€ì§€ê°€ ìžˆëŠ”ë°
 
  
 
-1. String substring(int index) : StringÀÇ index¹øÂ° °ªºÎÅÍ ³¡±îÁö °¡Á®¿Â´Ù.   
+1. String substring(int index) : Stringì˜ indexë²ˆì§¸ ê°’ë¶€í„° ëê¹Œì§€ ê°€ì ¸ì˜¨ë‹¤.   
 
  ex)
 
@@ -30,7 +30,7 @@ import java.io.InputStreamReader;
 
  
 
-2. String substring(int beginIndex, int endIndex) : StringÀÇ beginIndex¹øÂ° °ªºÎÅÍ (endIndex-1)¹øÂ° °ª±îÁö °¡Á®¿Â´Ù.   
+2. String substring(int beginIndex, int endIndex) : Stringì˜ beginIndexë²ˆì§¸ ê°’ë¶€í„° (endIndex-1)ë²ˆì§¸ ê°’ê¹Œì§€ ê°€ì ¸ì˜¨ë‹¤.   
  
  ex)
  
@@ -39,10 +39,10 @@ import java.io.InputStreamReader;
 
  
 
-ÀÌ¸¦ ÀÌ¿ëÇØ¼­ for¹® ¾È¿¡¼­ ¹®ÀÚ¿­À» ÀÔ·Â¹Þ¾Ò´Ù.
-ÇÑ¹ø¿¡ Ãâ·ÂÇÏ±â À§ÇØ String ¹è¿­ name[]À» ¼±¾ðÇÑ ´ÙÀ½,
-Ã¹¹øÂ° ±ÛÀÚ¸¦ °¡Á®¿À±â À§ÇØ str.substring(0,1)
-¸¶Áö¸· ±ÛÀÚ¸¦ °¡Á®¿À±â À§ÇØ str.substring(str.length()-1, str.length())À» ÇÏ¿´´Ù.
+ì´ë¥¼ ì´ìš©í•´ì„œ forë¬¸ ì•ˆì—ì„œ ë¬¸ìžì—´ì„ ìž…ë ¥ë°›ì•˜ë‹¤.
+í•œë²ˆì— ì¶œë ¥í•˜ê¸° ìœ„í•´ String ë°°ì—´ name[]ì„ ì„ ì–¸í•œ ë‹¤ìŒ,
+ì²«ë²ˆì§¸ ê¸€ìžë¥¼ ê°€ì ¸ì˜¤ê¸° ìœ„í•´ str.substring(0,1)
+ë§ˆì§€ë§‰ ê¸€ìžë¥¼ ê°€ì ¸ì˜¤ê¸° ìœ„í•´ str.substring(str.length()-1, str.length())ì„ í•˜ì˜€ë‹¤.
 */
 
 public class step_05_03 {

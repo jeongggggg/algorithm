@@ -8,12 +8,12 @@ import java.io.IOException;
 
 /*
 	10926. ??!
-	ÁØÇÏ´Â »çÀÌÆ®¿¡ È¸¿ø°¡ÀÔÀ» ÇÏ´Ù°¡ joonas¶ó´Â ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â °ÍÀ» º¸°í ³î¶ú´Ù. 
-	ÁØÇÏ´Â ³î¶÷À» ??!·Î Ç¥ÇöÇÑ´Ù. ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁ³À» ¶§, 
-	³î¶÷À» Ç¥ÇöÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	ì¤€í•˜ëŠ” ì‚¬ì´íŠ¸ì— íšŒì›ê°€ìž…ì„ í•˜ë‹¤ê°€ joonasë¼ëŠ” ì•„ì´ë””ê°€ ì´ë¯¸ ì¡´ìž¬í•˜ëŠ” ê²ƒì„ ë³´ê³  ë†€ëžë‹¤. 
+	ì¤€í•˜ëŠ” ë†€ëžŒì„ ??!ë¡œ í‘œí˜„í•œë‹¤. ì¤€í•˜ê°€ ê°€ìž…í•˜ë ¤ê³  í•˜ëŠ” ì‚¬ì´íŠ¸ì— ì´ë¯¸ ì¡´ìž¬í•˜ëŠ” ì•„ì´ë””ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, 
+	ë†€ëžŒì„ í‘œí˜„í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 */ 
 
-// Scanner »ç¿ë
+// Scanner ì‚¬ìš©
 public class step_01_07 {
 	
 	public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class step_01_07 {
 	}
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_01_07_01 {
 	
  	public static void main(String[] args) throws IOException {

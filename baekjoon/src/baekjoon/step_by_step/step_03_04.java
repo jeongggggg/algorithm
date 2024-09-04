@@ -6,33 +6,33 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-	25304. ¿µ¼öÁõ
-	¹®Á¦ : ÁØ¿øÀÌ´Â Àú¹ø ÁÖ¿¡ »ì¸é¼­ Ã³À½À¸·Î ÄÚ½ºÆ®ÄÚ¸¦ °¡ ºÃ´Ù. Á¤¸» ¸ÚÁ³´Ù. 
-	±×·±µ¥, ¸î °³ ´ãÁöµµ ¾Ê¾Ò´Âµ¥ ¼ö»óÇÏ°Ô ³ôÀº ±Ý¾×ÀÌ ³ª¿À´Â °ÍÀÌ´Ù! 
-	ÁØ¿øÀÌ´Â ¿µ¼öÁõÀ» º¸¸é¼­ Á¤È®ÇÏ°Ô °è»êµÈ °ÍÀÌ ¸Â´ÂÁö È®ÀÎÇØº¸·Á ÇÑ´Ù.
-	¿µ¼öÁõ¿¡ ÀûÈù,
-	- ±¸¸ÅÇÑ °¢ ¹°°ÇÀÇ °¡°Ý°ú °³¼ö
-	- ±¸¸ÅÇÑ ¹°°ÇµéÀÇ ÃÑ ±Ý¾×
-	À» º¸°í, ±¸¸ÅÇÑ ¹°°ÇÀÇ °¡°Ý°ú °³¼ö·Î °è»êÇÑ ÃÑ ±Ý¾×ÀÌ ¿µ¼öÁõ¿¡ ÀûÈù ÃÑ ±Ý¾×°ú ÀÏÄ¡ÇÏ´ÂÁö °Ë»çÇØº¸ÀÚ.
+	25304. ì˜ìˆ˜ì¦
+	ë¬¸ì œ : ì¤€ì›ì´ëŠ” ì €ë²ˆ ì£¼ì— ì‚´ë©´ì„œ ì²˜ìŒìœ¼ë¡œ ì½”ìŠ¤íŠ¸ì½”ë¥¼ ê°€ ë´¤ë‹¤. ì •ë§ ë©‹ì¡Œë‹¤. 
+	ê·¸ëŸ°ë°, ëª‡ ê°œ ë‹´ì§€ë„ ì•Šì•˜ëŠ”ë° ìˆ˜ìƒí•˜ê²Œ ë†’ì€ ê¸ˆì•¡ì´ ë‚˜ì˜¤ëŠ” ê²ƒì´ë‹¤! 
+	ì¤€ì›ì´ëŠ” ì˜ìˆ˜ì¦ì„ ë³´ë©´ì„œ ì •í™•í•˜ê²Œ ê³„ì‚°ëœ ê²ƒì´ ë§žëŠ”ì§€ í™•ì¸í•´ë³´ë ¤ í•œë‹¤.
+	ì˜ìˆ˜ì¦ì— ì ížŒ,
+	- êµ¬ë§¤í•œ ê° ë¬¼ê±´ì˜ ê°€ê²©ê³¼ ê°œìˆ˜
+	- êµ¬ë§¤í•œ ë¬¼ê±´ë“¤ì˜ ì´ ê¸ˆì•¡
+	ì„ ë³´ê³ , êµ¬ë§¤í•œ ë¬¼ê±´ì˜ ê°€ê²©ê³¼ ê°œìˆ˜ë¡œ ê³„ì‚°í•œ ì´ ê¸ˆì•¡ì´ ì˜ìˆ˜ì¦ì— ì ížŒ ì´ ê¸ˆì•¡ê³¼ ì¼ì¹˜í•˜ëŠ”ì§€ ê²€ì‚¬í•´ë³´ìž.
 	
-	ÀÔ·Â : Ã¹Â° ÁÙ¿¡´Â ¿µ¼öÁõ¿¡ ÀûÈù ÃÑ ±Ý¾× X°¡ ÁÖ¾îÁø´Ù.
-	µÑÂ° ÁÙ¿¡´Â ¿µ¼öÁõ¿¡ ÀûÈù ±¸¸ÅÇÑ ¹°°ÇÀÇ Á¾·ùÀÇ ¼ö NÀÌ ÁÖ¾îÁø´Ù.
-	ÀÌÈÄ N°³ÀÇ ÁÙ¿¡´Â °¢ ¹°°ÇÀÇ °¡°Ý a¿Í °³¼ö b°¡ °ø¹éÀ» »çÀÌ¿¡ µÎ°í ÁÖ¾îÁø´Ù.
+	ìž…ë ¥ : ì²«ì§¸ ì¤„ì—ëŠ” ì˜ìˆ˜ì¦ì— ì ížŒ ì´ ê¸ˆì•¡ Xê°€ ì£¼ì–´ì§„ë‹¤.
+	ë‘˜ì§¸ ì¤„ì—ëŠ” ì˜ìˆ˜ì¦ì— ì ížŒ êµ¬ë§¤í•œ ë¬¼ê±´ì˜ ì¢…ë¥˜ì˜ ìˆ˜ Nì´ ì£¼ì–´ì§„ë‹¤.
+	ì´í›„ Nê°œì˜ ì¤„ì—ëŠ” ê° ë¬¼ê±´ì˜ ê°€ê²© aì™€ ê°œìˆ˜ bê°€ ê³µë°±ì„ ì‚¬ì´ì— ë‘ê³  ì£¼ì–´ì§„ë‹¤.
 */
 
 public class step_03_04 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-        int X = sc.nextInt(); // ¿µ¼öÁõ¿¡ ÀûÈù ÃÑ ±Ý¾×
-        int N = sc.nextInt(); // Á¾·ùÀÇ ¼ö
+        int X = sc.nextInt(); // ì˜ìˆ˜ì¦ì— ì ížŒ ì´ ê¸ˆì•¡
+        int N = sc.nextInt(); // ì¢…ë¥˜ì˜ ìˆ˜
         int total = 0;
         
         sc.close();
 
         for(int i = 0; i < N; i++){
-            int a = sc.nextInt(); // °¢ ¹°°ÇÀÇ °¡°Ý
-            int b = sc.nextInt(); // °¢ ¹°°ÇÀÇ °³¼ö
+            int a = sc.nextInt(); // ê° ë¬¼ê±´ì˜ ê°€ê²©
+            int b = sc.nextInt(); // ê° ë¬¼ê±´ì˜ ê°œìˆ˜
             total += a * b;
         }
         if(total == X){
@@ -49,13 +49,13 @@ class step_03_0_01 {
 
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
-			int X = sc.nextInt(); // ¿µ¼öÁõ¿¡ ÀûÈù ÃÑ ±Ý¾×
-			int N = sc.nextInt(); // Á¾·ùÀÇ ¼ö
+			int X = sc.nextInt(); // ì˜ìˆ˜ì¦ì— ì ížŒ ì´ ê¸ˆì•¡
+			int N = sc.nextInt(); // ì¢…ë¥˜ì˜ ìˆ˜
 			int total = 0;
 
 			for(int i = 0; i < N; i++){
-			    int a = sc.nextInt(); // °¢ ¹°°ÇÀÇ °¡°Ý
-			    int b = sc.nextInt(); // °¢ ¹°°ÇÀÇ °³¼ö
+			    int a = sc.nextInt(); // ê° ë¬¼ê±´ì˜ ê°€ê²©
+			    int b = sc.nextInt(); // ê° ë¬¼ê±´ì˜ ê°œìˆ˜
 			    total += a * b;
 			}
 			if(total == X){

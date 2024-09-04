@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
-	25206. ³ÊÀÇ ÆòÁ¡Àº
-	ÀÎÇÏ´ëÇÐ±³ ÄÄÇ»ÅÍ°øÇÐ°ú¸¦ Á¹¾÷ÇÏ±â À§ÇØ¼­´Â, Àü°øÆòÁ¡ÀÌ 3.3 ÀÌ»óÀÌ°Å³ª Á¹¾÷°í»ç¸¦ Åë°úÇØ¾ß ÇÑ´Ù. 
-	±×·±µ¥ ¾Æ»Ô½Î, Ä¡ÈÆÀÌ´Â ±ôºýÇÏ°í Á¹¾÷°í»ç¸¦ ÀÀ½ÃÇÏÁö ¾Ê¾Ò´Ù´Â »ç½ÇÀ» ±ú´Þ¾Ò´Ù!
-	Ä¡ÈÆÀÌÀÇ Àü°øÆòÁ¡À» °è»êÇØÁÖ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇØº¸ÀÚ.
-	Àü°øÆòÁ¡Àº Àü°ø°ú¸ñº° (ÇÐÁ¡ ¡¿ °ú¸ñÆòÁ¡)ÀÇ ÇÕÀ» ÇÐÁ¡ÀÇ ÃÑÇÕÀ¸·Î ³ª´« °ªÀÌ´Ù.
-	ÀÎÇÏ´ëÇÐ±³ ÄÄÇ»ÅÍ°øÇÐ°úÀÇ µî±Þ¿¡ µû¸¥ °ú¸ñÆòÁ¡Àº ´ÙÀ½ Ç¥¿Í °°´Ù.
+	25206. ë„ˆì˜ í‰ì ì€
+	ì¸í•˜ëŒ€í•™êµ ì»´í“¨í„°ê³µí•™ê³¼ë¥¼ ì¡¸ì—…í•˜ê¸° ìœ„í•´ì„œëŠ”, ì „ê³µí‰ì ì´ 3.3 ì´ìƒì´ê±°ë‚˜ ì¡¸ì—…ê³ ì‚¬ë¥¼ í†µê³¼í•´ì•¼ í•œë‹¤. 
+	ê·¸ëŸ°ë° ì•„ë¿”ì‹¸, ì¹˜í›ˆì´ëŠ” ê¹œë¹¡í•˜ê³  ì¡¸ì—…ê³ ì‚¬ë¥¼ ì‘ì‹œí•˜ì§€ ì•Šì•˜ë‹¤ëŠ” ì‚¬ì‹¤ì„ ê¹¨ë‹¬ì•˜ë‹¤!
+	ì¹˜í›ˆì´ì˜ ì „ê³µí‰ì ì„ ê³„ì‚°í•´ì£¼ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•´ë³´ìž.
+	ì „ê³µí‰ì ì€ ì „ê³µê³¼ëª©ë³„ (í•™ì  Ã— ê³¼ëª©í‰ì )ì˜ í•©ì„ í•™ì ì˜ ì´í•©ìœ¼ë¡œ ë‚˜ëˆˆ ê°’ì´ë‹¤.
+	ì¸í•˜ëŒ€í•™êµ ì»´í“¨í„°ê³µí•™ê³¼ì˜ ë“±ê¸‰ì— ë”°ë¥¸ ê³¼ëª©í‰ì ì€ ë‹¤ìŒ í‘œì™€ ê°™ë‹¤.
 	
 	A+	4.5
 	A0	4.0
@@ -22,40 +22,40 @@ import java.util.Map;
 	D+	1.5
 	D0	1.0
 	F	0.0
-	P/F °ú¸ñÀÇ °æ¿ì µî±ÞÀÌ P¶Ç´Â F·Î Ç¥½ÃµÇ´Âµ¥, µî±ÞÀÌ PÀÎ °ú¸ñÀº °è»ê¿¡¼­ Á¦¿ÜÇØ¾ß ÇÑ´Ù.
-	°ú¿¬ Ä¡ÈÆÀÌ´Â ¹«»çÈ÷ Á¹¾÷ÇÒ ¼ö ÀÖÀ»±î?
+	P/F ê³¼ëª©ì˜ ê²½ìš° ë“±ê¸‰ì´ Pë˜ëŠ” Fë¡œ í‘œì‹œë˜ëŠ”ë°, ë“±ê¸‰ì´ Pì¸ ê³¼ëª©ì€ ê³„ì‚°ì—ì„œ ì œì™¸í•´ì•¼ í•œë‹¤.
+	ê³¼ì—° ì¹˜í›ˆì´ëŠ” ë¬´ì‚¬ížˆ ì¡¸ì—…í•  ìˆ˜ ìžˆì„ê¹Œ?
 	
-	20ÁÙ¿¡ °ÉÃÄ Ä¡ÈÆÀÌ°¡ ¼ö°­ÇÑ Àü°ø°ú¸ñÀÇ °ú¸ñ¸í, ÇÐÁ¡, µî±ÞÀÌ °ø¹éÀ¸·Î ±¸ºÐµÇ¾î ÁÖ¾îÁø´Ù.
-	Ä¡ÈÆÀÌÀÇ Àü°øÆòÁ¡À» Ãâ·ÂÇÑ´Ù.
+	20ì¤„ì— ê±¸ì³ ì¹˜í›ˆì´ê°€ ìˆ˜ê°•í•œ ì „ê³µê³¼ëª©ì˜ ê³¼ëª©ëª…, í•™ì , ë“±ê¸‰ì´ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ ì£¼ì–´ì§„ë‹¤.
+	ì¹˜í›ˆì´ì˜ ì „ê³µí‰ì ì„ ì¶œë ¥í•œë‹¤.
 
-	Á¤´ä°úÀÇ Àý´ë¿ÀÂ÷ ¶Ç´Â »ó´ë¿ÀÂ÷°¡ 10^-4 ÀÌÇÏÀÌ¸é Á¤´äÀ¸·Î ÀÎÁ¤ÇÑ´Ù.
+	ì •ë‹µê³¼ì˜ ì ˆëŒ€ì˜¤ì°¨ ë˜ëŠ” ìƒëŒ€ì˜¤ì°¨ê°€ 10^-4 ì´í•˜ì´ë©´ ì •ë‹µìœ¼ë¡œ ì¸ì •í•œë‹¤.
 	
-	[Á¦ÇÑ]
-	1 ¡Â °ú¸ñ¸íÀÇ ±æÀÌ ¡Â 50
-	2.°ú¸ñ¸íÀº ¾ËÆÄºª ´ë¼Ò¹®ÀÚ ¶Ç´Â ¼ýÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, ¶ç¾î¾²±â ¾øÀÌ ÁÖ¾îÁø´Ù. ÀÔ·ÂÀ¸·Î ÁÖ¾îÁö´Â ¸ðµç °ú¸ñ¸íÀº ¼­·Î ´Ù¸£´Ù.
-	3.ÇÐÁ¡Àº 1.0,2.0,3.0,4.0Áß ÇÏ³ªÀÌ´Ù.
-	4.µî±ÞÀº A+,A0,B+,B0,C+,C0,D+,D0,F,PÁß ÇÏ³ªÀÌ´Ù.
-	5.Àû¾îµµ ÇÑ °ú¸ñÀº µî±ÞÀÌ P°¡ ¾Æ´ÔÀÌ º¸ÀåµÈ´Ù.
+	[ì œí•œ]
+	1 â‰¤ ê³¼ëª©ëª…ì˜ ê¸¸ì´ â‰¤ 50
+	2.ê³¼ëª©ëª…ì€ ì•ŒíŒŒë²³ ëŒ€ì†Œë¬¸ìž ë˜ëŠ” ìˆ«ìžë¡œë§Œ ì´ë£¨ì–´ì ¸ ìžˆìœ¼ë©°, ë„ì–´ì“°ê¸° ì—†ì´ ì£¼ì–´ì§„ë‹¤. ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§€ëŠ” ëª¨ë“  ê³¼ëª©ëª…ì€ ì„œë¡œ ë‹¤ë¥´ë‹¤.
+	3.í•™ì ì€ 1.0,2.0,3.0,4.0ì¤‘ í•˜ë‚˜ì´ë‹¤.
+	4.ë“±ê¸‰ì€ A+,A0,B+,B0,C+,C0,D+,D0,F,Pì¤‘ í•˜ë‚˜ì´ë‹¤.
+	5.ì ì–´ë„ í•œ ê³¼ëª©ì€ ë“±ê¸‰ì´ Pê°€ ì•„ë‹˜ì´ ë³´ìž¥ëœë‹¤.
 */
 
 public class step_06_08 {
 
 	 public static void main(String[] args) {
-        // BufferedReader¸¦ »ç¿ëÇÏ¿© ÀÔ·ÂÀ» ÀÐÀ½
+        // BufferedReaderë¥¼ ì‚¬ìš©í•˜ì—¬ ìž…ë ¥ì„ ì½ìŒ
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        double sum = 0;  // ÃÑ Á¡¼ö ÇÕ°è¸¦ ÀúÀåÇÒ º¯¼ö
-        double count = 0;  // ÃÑ ÇÐÁ¡À» ÀúÀåÇÒ º¯¼ö
+        double sum = 0;  // ì´ ì ìˆ˜ í•©ê³„ë¥¼ ì €ìž¥í•  ë³€ìˆ˜
+        double count = 0;  // ì´ í•™ì ì„ ì €ìž¥í•  ë³€ìˆ˜
 
         try {
-            // 20°³ÀÇ ÀÔ·ÂÀ» Ã³¸®
+            // 20ê°œì˜ ìž…ë ¥ì„ ì²˜ë¦¬
             for (int i = 0; i < 20; i++) {
-                // ÇÑ ÁÙÀÇ ÀÔ·ÂÀ» ÀÐ¾î °ø¹éÀ¸·Î ³ª´®
+                // í•œ ì¤„ì˜ ìž…ë ¥ì„ ì½ì–´ ê³µë°±ìœ¼ë¡œ ë‚˜ëˆ”
                 String[] input = reader.readLine().split(" ");
-                double val = Double.parseDouble(input[1]);  // ÇÐÁ¡
-                String grade = input[2];  // ¼ºÀû
-                count += val;  // ÃÑ ÇÐÁ¡¿¡ ÇöÀç ÇÐÁ¡À» ´õÇÔ
+                double val = Double.parseDouble(input[1]);  // í•™ì 
+                String grade = input[2];  // ì„±ì 
+                count += val;  // ì´ í•™ì ì— í˜„ìž¬ í•™ì ì„ ë”í•¨
 
-                // ¼ºÀû¿¡ µû¶ó Á¡¼ö¸¦ °è»êÇÏ¿© ÃÑ Á¡¼ö¿¡ ´õÇÔ
+                // ì„±ì ì— ë”°ë¼ ì ìˆ˜ë¥¼ ê³„ì‚°í•˜ì—¬ ì´ ì ìˆ˜ì— ë”í•¨
                 switch (grade) {
                     case "A+":
                         sum += val * 4.5;
@@ -85,33 +85,33 @@ public class step_06_08 {
                         sum += val * 0;
                         break;
                     case "P":
-                        count -= val;  // "P" (ÆÐ½º) ¼ºÀûÀÎ °æ¿ì ÃÑ ÇÐÁ¡¿¡¼­ Á¦¿Ü
+                        count -= val;  // "P" (íŒ¨ìŠ¤) ì„±ì ì¸ ê²½ìš° ì´ í•™ì ì—ì„œ ì œì™¸
                         break;
                 }
             }
 
-            // Æò±Õ ÇÐÁ¡À» °è»êÇÏ¿© Ãâ·Â
+            // í‰ê·  í•™ì ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥
             System.out.println(sum / count);
         } catch (IOException e) {
-            // ÀÔÃâ·Â ¿¹¿Ü Ã³¸®
+            // ìž…ì¶œë ¥ ì˜ˆì™¸ ì²˜ë¦¬
             e.printStackTrace();
         } catch (NumberFormatException e) {
-            // ¼ýÀÚ Çü½Ä ¿¹¿Ü Ã³¸®
+            // ìˆ«ìž í˜•ì‹ ì˜ˆì™¸ ì²˜ë¦¬
             e.printStackTrace();
         }
     }
 }
 
-// ÇÐÁ¡°ú ´ëÀÀÇÏ´Â Á¡¼ö¸¦ HashMap¿¡ ÀúÀåÇÏ¿© switch ¹®À» °£¼ÒÈ­
+// í•™ì ê³¼ ëŒ€ì‘í•˜ëŠ” ì ìˆ˜ë¥¼ HashMapì— ì €ìž¥í•˜ì—¬ switch ë¬¸ì„ ê°„ì†Œí™”
 class step_06_08_01 {
 
 	 public static void main(String[] args) {
-		  // BufferedReader¸¦ »ç¿ëÇÏ¿© ÀÔ·ÂÀ» ÀÐÀ½
+		  // BufferedReaderë¥¼ ì‚¬ìš©í•˜ì—¬ ìž…ë ¥ì„ ì½ìŒ
 	        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-	        double sum = 0;  // ÃÑ ÇÐÁ¡À» ÀúÀåÇÒ º¯¼ö
-	        double count = 0; // ÃÑ °ú¸ñ ÇÐÁ¡À» ÀúÀåÇÒ º¯¼ö
+	        double sum = 0;  // ì´ í•™ì ì„ ì €ìž¥í•  ë³€ìˆ˜
+	        double count = 0; // ì´ ê³¼ëª© í•™ì ì„ ì €ìž¥í•  ë³€ìˆ˜
 
-	        // ÇÐÁ¡ º° Á¡¼ö¸¦ ÀúÀåÇÏ´Â ¸Ê »ý¼º
+	        // í•™ì  ë³„ ì ìˆ˜ë¥¼ ì €ìž¥í•˜ëŠ” ë§µ ìƒì„±
 	        Map<String, Double> gradeMap = new HashMap<>();
 	        gradeMap.put("A+", 4.5);
 	        gradeMap.put("A0", 4.0);
@@ -124,26 +124,26 @@ class step_06_08_01 {
 	        gradeMap.put("F", 0.0);
 
 	        try {
-	        	// 20°³ÀÇ ÀÔ·ÂÀ» Ã³¸®
+	        	// 20ê°œì˜ ìž…ë ¥ì„ ì²˜ë¦¬
 	            for (int i = 0; i < 20; i++) {
-	            	 // ÇÑ ÁÙÀÇ ÀÔ·ÂÀ» ÀÐ¾î °ø¹éÀ¸·Î ³ª´®
+	            	 // í•œ ì¤„ì˜ ìž…ë ¥ì„ ì½ì–´ ê³µë°±ìœ¼ë¡œ ë‚˜ëˆ”
 	                String[] input = reader.readLine().split(" ");
-	                double val = Double.parseDouble(input[1]);  // ÇÐÁ¡
-	                String grade = input[2];  // ¼ºÀû
+	                double val = Double.parseDouble(input[1]);  // í•™ì 
+	                String grade = input[2];  // ì„±ì 
 	                
-	                // "P" (ÆÐ½º) ÇÐÁ¡ÀÌ ¾Æ´Ñ °æ¿ì¿¡¸¸ Ã³¸®
+	                // "P" (íŒ¨ìŠ¤) í•™ì ì´ ì•„ë‹Œ ê²½ìš°ì—ë§Œ ì²˜ë¦¬
 	                if (!grade.equals("P")) {
-	                    count += val; // ÃÑ ÇÐÁ¡¿¡ ´õÇÔ
-	                    sum += val * gradeMap.getOrDefault(grade, 0.0); // ÃÑ Á¡¼ö¿¡ °¡Áß ÇÐÁ¡À» ´õÇÔ
+	                    count += val; // ì´ í•™ì ì— ë”í•¨
+	                    sum += val * gradeMap.getOrDefault(grade, 0.0); // ì´ ì ìˆ˜ì— ê°€ì¤‘ í•™ì ì„ ë”í•¨
 	                }
 	            }
-	            // Æò±Õ ÇÐÁ¡À» °è»êÇÏ¿© Ãâ·Â
+	            // í‰ê·  í•™ì ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥
 	            System.out.println(sum / count);
 	        } catch (IOException e) {
-	        	// ÀÔÃâ·Â ¿¹¿Ü Ã³¸®
+	        	// ìž…ì¶œë ¥ ì˜ˆì™¸ ì²˜ë¦¬
 	            e.printStackTrace();
 	        } catch (NumberFormatException e) {
-	        	// ¼ýÀÚ Çü½Ä ¿¹¿Ü Ã³¸®
+	        	// ìˆ«ìž í˜•ì‹ ì˜ˆì™¸ ì²˜ë¦¬
 	            System.err.println("Invalid number format.");
 	        }
 	    }

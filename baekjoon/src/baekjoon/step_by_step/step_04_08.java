@@ -6,16 +6,16 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 /*
-	3052. ³ª¸ÓÁö
-	µÎ ÀÚ¿¬¼ö A¿Í B°¡ ÀÖÀ» ¶§, A%B´Â A¸¦ B·Î ³ª´« ³ª¸ÓÁö ÀÌ´Ù. 
-	¿¹¸¦ µé¾î, 7, 14, 27, 38À» 3À¸·Î ³ª´« ³ª¸ÓÁö´Â 1, 2, 0, 2ÀÌ´Ù. 
-	¼ö 10°³¸¦ ÀÔ·Â¹ÞÀº µÚ, ÀÌ¸¦ 42·Î ³ª´« ³ª¸ÓÁö¸¦ ±¸ÇÑ´Ù. 
-	±× ´ÙÀ½ ¼­·Î ´Ù¸¥ °ªÀÌ ¸î °³ ÀÖ´ÂÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	3052. ë‚˜ë¨¸ì§€
+	ë‘ ìžì—°ìˆ˜ Aì™€ Bê°€ ìžˆì„ ë•Œ, A%BëŠ” Aë¥¼ Bë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ ì´ë‹¤. 
+	ì˜ˆë¥¼ ë“¤ì–´, 7, 14, 27, 38ì„ 3ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ëŠ” 1, 2, 0, 2ì´ë‹¤. 
+	ìˆ˜ 10ê°œë¥¼ ìž…ë ¥ë°›ì€ ë’¤, ì´ë¥¼ 42ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ êµ¬í•œë‹¤. 
+	ê·¸ ë‹¤ìŒ ì„œë¡œ ë‹¤ë¥¸ ê°’ì´ ëª‡ ê°œ ìžˆëŠ”ì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	Ã¹Â° ÁÙºÎÅÍ ¿­¹øÂ° ÁÙ ±îÁö ¼ýÀÚ°¡ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁø´Ù. 
-	ÀÌ ¼ýÀÚ´Â 1,000º¸´Ù ÀÛ°Å³ª °°°í, À½ÀÌ ¾Æ´Ñ Á¤¼öÀÌ´Ù.
+	ì²«ì§¸ ì¤„ë¶€í„° ì—´ë²ˆì§¸ ì¤„ ê¹Œì§€ ìˆ«ìžê°€ í•œ ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§„ë‹¤. 
+	ì´ ìˆ«ìžëŠ” 1,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ê³ , ìŒì´ ì•„ë‹Œ ì •ìˆ˜ì´ë‹¤.
 	
-	Ã¹Â° ÁÙ¿¡, 42·Î ³ª´©¾úÀ» ¶§, ¼­·Î ´Ù¸¥ ³ª¸ÓÁö°¡ ¸î °³ ÀÖ´ÂÁö Ãâ·ÂÇÑ´Ù.
+	ì²«ì§¸ ì¤„ì—, 42ë¡œ ë‚˜ëˆ„ì—ˆì„ ë•Œ, ì„œë¡œ ë‹¤ë¥¸ ë‚˜ë¨¸ì§€ê°€ ëª‡ ê°œ ìžˆëŠ”ì§€ ì¶œë ¥í•œë‹¤.
 */
 
 // HashSet +Scanner
@@ -27,7 +27,7 @@ public class step_04_08 {
  
 		for (int i = 0; i < 10; i++) {
 			h.add(in.nextInt() % 42);
-		//ÀÔ·Â¹ÞÀº °ªÀÇ ³ª¸ÓÁö °ªÀ» add¸Þ¼Òµå¸¦ ÅëÇØ HashSet¿¡ ÀúÀå
+		//ìž…ë ¥ë°›ì€ ê°’ì˜ ë‚˜ë¨¸ì§€ ê°’ì„ addë©”ì†Œë“œë¥¼ í†µí•´ HashSetì— ì €ìž¥
 		}
         
 		in.close();
@@ -54,7 +54,7 @@ class step_04_08_01 {
 
 }
 
-// ¹è¿­ »ç¿ë
+// ë°°ì—´ ì‚¬ìš©
 class step_04_08_02 {
 
 	public static void main(String[] args) throws IOException {
@@ -68,7 +68,7 @@ class step_04_08_02 {
 	        
 	        int count = 0;
 	        for(boolean value : arr) {
-	            if(value){    // value °¡ true ¶ó¸é
+	            if(value){    // value ê°€ true ë¼ë©´
 	                count++;
 	            }
 	        }

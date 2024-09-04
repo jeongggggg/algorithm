@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /*
-	10807. °³¼ö ¼¼±â
-	¹®Á¦ : ÃÑ N°³ÀÇ Á¤¼ö°¡ ÁÖ¾îÁ³À» ¶§, Á¤¼ö v°¡ ¸î °³ÀÎÁö ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	10807. ê°œìˆ˜ ì„¸ê¸°
+	ë¬¸ì œ : ì´ Nê°œì˜ ì •ìˆ˜ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ì •ìˆ˜ vê°€ ëª‡ ê°œì¸ì§€ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	ÀÔ·Â : Ã¹Â° ÁÙ¿¡ Á¤¼öÀÇ °³¼ö N(1 ¡Â N ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù. 
-	µÑÂ° ÁÙ¿¡´Â Á¤¼ö°¡ °ø¹éÀ¸·Î ±¸ºÐµÇ¾îÁ®ÀÖ´Ù. ¼ÂÂ° ÁÙ¿¡´Â Ã£À¸·Á°í ÇÏ´Â Á¤¼ö v°¡ ÁÖ¾îÁø´Ù. 
-	ÀÔ·ÂÀ¸·Î ÁÖ¾îÁö´Â Á¤¼ö¿Í v´Â -100º¸´Ù Å©°Å³ª °°À¸¸ç, 100º¸´Ù ÀÛ°Å³ª °°´Ù.
+	ìž…ë ¥ : ì²«ì§¸ ì¤„ì— ì •ìˆ˜ì˜ ê°œìˆ˜ N(1 â‰¤ N â‰¤ 100)ì´ ì£¼ì–´ì§„ë‹¤. 
+	ë‘˜ì§¸ ì¤„ì—ëŠ” ì •ìˆ˜ê°€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ì ¸ìžˆë‹¤. ì…‹ì§¸ ì¤„ì—ëŠ” ì°¾ìœ¼ë ¤ê³  í•˜ëŠ” ì •ìˆ˜ vê°€ ì£¼ì–´ì§„ë‹¤. 
+	ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§€ëŠ” ì •ìˆ˜ì™€ vëŠ” -100ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ìœ¼ë©°, 100ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤.
 	
-	Ãâ·Â : Ã¹Â° ÁÙ¿¡ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø N°³ÀÇ Á¤¼ö Áß¿¡ v°¡ ¸î °³ÀÎÁö Ãâ·ÂÇÑ´Ù.
+	ì¶œë ¥ : ì²«ì§¸ ì¤„ì— ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ Nê°œì˜ ì •ìˆ˜ ì¤‘ì— vê°€ ëª‡ ê°œì¸ì§€ ì¶œë ¥í•œë‹¤.
 */
 
 public class step_04_01 {
@@ -19,17 +19,17 @@ public class step_04_01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-        int count = 0;						 // b ¿Í ÀÏÄ¡ÇÒ½Ã °¹¼ö¸¦ ¿Ã¸®´Â º¯¼ö
+        int count = 0;						 // b ì™€ ì¼ì¹˜í• ì‹œ ê°¯ìˆ˜ë¥¼ ì˜¬ë¦¬ëŠ” ë³€ìˆ˜
         int N = sc.nextInt();
-        int[] arr = new int[N];				 // ¹è¿­ »ý¼º, ±æÀÌ´Â N¸¸Å­
+        int[] arr = new int[N];				 // ë°°ì—´ ìƒì„±, ê¸¸ì´ëŠ” Në§Œí¼
 
         for(int i = 0; i < N; i++) {
-            arr[i] = sc.nextInt();			 // ¹è¿­¿¡ ÀÔ·ÂÇÑ Á¤¼öµé ³Ö¾îÁÖ±â
+            arr[i] = sc.nextInt();			 // ë°°ì—´ì— ìž…ë ¥í•œ ì •ìˆ˜ë“¤ ë„£ì–´ì£¼ê¸°
         }
-        int b = sc.nextInt();				 // [¹®Á¦] ÀÔ·Â ¼¼¹øÂ° ÁÙ Á¤¼ö
+        int b = sc.nextInt();				 // [ë¬¸ì œ] ìž…ë ¥ ì„¸ë²ˆì§¸ ì¤„ ì •ìˆ˜
 
-        for(int j = 0; j < arr.length; j++){ // ¹è¿­ ±æÀÌ¸¸Å­ ¹Ýº¹¹® µ¹¸®¸é¼­ º¯¼ö b ¿Í °°Àº
-            if(b == arr[j]){				 // ¼ýÀÚ Ã£±â. °°À¸¸é count º¯¼ö 1¾¿ Áõ°¡
+        for(int j = 0; j < arr.length; j++){ // ë°°ì—´ ê¸¸ì´ë§Œí¼ ë°˜ë³µë¬¸ ëŒë¦¬ë©´ì„œ ë³€ìˆ˜ b ì™€ ê°™ì€
+            if(b == arr[j]){				 // ìˆ«ìž ì°¾ê¸°. ê°™ìœ¼ë©´ count ë³€ìˆ˜ 1ì”© ì¦ê°€
                 count++;
             }
         }
@@ -43,8 +43,8 @@ public class step_04_01 {
 
 
 /*
- * BufferedReader·Î ÀÔ·Â¹Þ°í StringTokenizer·Î ¶ç¾î¾²±â(°ø¹é)±îÁö ÀÔ·Â¹Þ¾Æ ÁÖ¾ú´Ù. 
- * µÚ¿¡ , "  " ÇÏÁö ¾Ê¾Æµµ ÀÚµ¿À¸·Î ¶ç¾î¾²±â¸¦ ±âÁØÀ¸·Î ÆÄ½Ì
+ * BufferedReaderë¡œ ìž…ë ¥ë°›ê³  StringTokenizerë¡œ ë„ì–´ì“°ê¸°(ê³µë°±)ê¹Œì§€ ìž…ë ¥ë°›ì•„ ì£¼ì—ˆë‹¤. 
+ * ë’¤ì— , "  " í•˜ì§€ ì•Šì•„ë„ ìžë™ìœ¼ë¡œ ë„ì–´ì“°ê¸°ë¥¼ ê¸°ì¤€ìœ¼ë¡œ íŒŒì‹±
  * 
 */
 class step_04_01_01 {

@@ -7,9 +7,9 @@ import java.io.OutputStreamWriter;
 import java.io.BufferedWriter;
 
 /*
-	2739. ±¸±¸´Ü
-	NÀ» ÀÔ·Â¹ÞÀº µÚ, ±¸±¸´Ü N´ÜÀ» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À. Ãâ·Â Çü½Ä¿¡ ¸ÂÃç¼­ Ãâ·ÂÇÏ¸é µÈ´Ù.
-	Ã¹Â° ÁÙ¿¡ NÀÌ ÁÖ¾îÁø´Ù. NÀº 1º¸´Ù Å©°Å³ª °°°í, 9º¸´Ù ÀÛ°Å³ª °°´Ù.
+	2739. êµ¬êµ¬ë‹¨
+	Nì„ ìž…ë ¥ë°›ì€ ë’¤, êµ¬êµ¬ë‹¨ Në‹¨ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤. ì¶œë ¥ í˜•ì‹ì— ë§žì¶°ì„œ ì¶œë ¥í•˜ë©´ ëœë‹¤.
+	ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 9ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤.
 */
 
 public class step_03_01 {

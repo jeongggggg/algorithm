@@ -6,39 +6,39 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /*
-	5597.°úÁ¦ ¾È ³»½Å ºÐ..?
-	X´ëÇÐ M±³¼ö´ÔÀº ÇÁ·Î±×·¡¹Ö ¼ö¾÷À» ¸Ã°í ÀÖ´Ù. 
-	±³½Ç¿£ ÇÐ»ýÀÌ 30¸íÀÌ ÀÖ´Âµ¥, ÇÐ»ý ¸íºÎ¿£ °¢ ÇÐ»ýº°·Î 1¹øºÎÅÍ 30¹ø±îÁö Ãâ¼®¹øÈ£°¡ ºÙ¾î ÀÖ´Ù.
-	±³¼ö´ÔÀÌ ³»ÁØ Æ¯º°°úÁ¦¸¦ 28¸íÀÌ Á¦ÃâÇß´Âµ¥, ±× Áß¿¡¼­ Á¦Ãâ ¾È ÇÑ ÇÐ»ý 2¸íÀÇ Ãâ¼®¹øÈ£¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	5597.ê³¼ì œ ì•ˆ ë‚´ì‹  ë¶„..?
+	XëŒ€í•™ Mêµìˆ˜ë‹˜ì€ í”„ë¡œê·¸ëž˜ë° ìˆ˜ì—…ì„ ë§¡ê³  ìžˆë‹¤. 
+	êµì‹¤ì—” í•™ìƒì´ 30ëª…ì´ ìžˆëŠ”ë°, í•™ìƒ ëª…ë¶€ì—” ê° í•™ìƒë³„ë¡œ 1ë²ˆë¶€í„° 30ë²ˆê¹Œì§€ ì¶œì„ë²ˆí˜¸ê°€ ë¶™ì–´ ìžˆë‹¤.
+	êµìˆ˜ë‹˜ì´ ë‚´ì¤€ íŠ¹ë³„ê³¼ì œë¥¼ 28ëª…ì´ ì œì¶œí–ˆëŠ”ë°, ê·¸ ì¤‘ì—ì„œ ì œì¶œ ì•ˆ í•œ í•™ìƒ 2ëª…ì˜ ì¶œì„ë²ˆí˜¸ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	ÀÔ·Â : ÀÔ·ÂÀº ÃÑ 28ÁÙ·Î °¢ Á¦ÃâÀÚ(ÇÐ»ý)ÀÇ Ãâ¼®¹øÈ£ n(1 ¡Â n ¡Â 30)°¡ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁø´Ù. Ãâ¼®¹øÈ£¿¡ Áßº¹Àº ¾ø´Ù.
+	ìž…ë ¥ : ìž…ë ¥ì€ ì´ 28ì¤„ë¡œ ê° ì œì¶œìž(í•™ìƒ)ì˜ ì¶œì„ë²ˆí˜¸ n(1 â‰¤ n â‰¤ 30)ê°€ í•œ ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§„ë‹¤. ì¶œì„ë²ˆí˜¸ì— ì¤‘ë³µì€ ì—†ë‹¤.
 		
-	Ãâ·Â : Ãâ·ÂÀº 2ÁÙÀÌ´Ù. 1¹øÂ° ÁÙ¿£ Á¦ÃâÇÏÁö ¾ÊÀº ÇÐ»ýÀÇ Ãâ¼®¹øÈ£ Áß °¡Àå ÀÛÀº °ÍÀ» Ãâ·ÂÇÏ°í, 
-	2¹øÂ° ÁÙ¿¡¼± ±× ´ÙÀ½ Ãâ¼®¹øÈ£¸¦ Ãâ·ÂÇÑ´Ù..
+	ì¶œë ¥ : ì¶œë ¥ì€ 2ì¤„ì´ë‹¤. 1ë²ˆì§¸ ì¤„ì—” ì œì¶œí•˜ì§€ ì•Šì€ í•™ìƒì˜ ì¶œì„ë²ˆí˜¸ ì¤‘ ê°€ìž¥ ìž‘ì€ ê²ƒì„ ì¶œë ¥í•˜ê³ , 
+	2ë²ˆì§¸ ì¤„ì—ì„  ê·¸ ë‹¤ìŒ ì¶œì„ë²ˆí˜¸ë¥¼ ì¶œë ¥í•œë‹¤..
 */
 
 
 public class step_04_07 {
 
-	 public static void main(String[] args) throws IOException { // Null ¿¹¿Ü Ã³¸®
+	 public static void main(String[] args) throws IOException { // Null ì˜ˆì™¸ ì²˜ë¦¬
 	        
-	    	Scanner in = new Scanner(System.in); // ½ºÄ³³Ê Ã³¸®
+	    	Scanner in = new Scanner(System.in); // ìŠ¤ìºë„ˆ ì²˜ë¦¬
 	    	
-	    	int[] arr = new int[31]; // ¹è¿­ 31°³ ÀÚ¸®±îÁö
+	    	int[] arr = new int[31]; // ë°°ì—´ 31ê°œ ìžë¦¬ê¹Œì§€
 	    	
-	    	int A; // º¯¼ö A ¼±¾ð
+	    	int A; // ë³€ìˆ˜ A ì„ ì–¸
 	    	
-	    	for(int i=1; i<29; i++) { // i°¡ 29 Àü±îÁö ¹Ýº¹ 
-	    		A = in.nextInt(); //  AÀ» °ª ¹ÞÀ½
-	    		arr[A] = 1;  // arr[³½»ç¶÷¹øÈ£] = 1 ·Î ÇÔ
+	    	for(int i=1; i<29; i++) { // iê°€ 29 ì „ê¹Œì§€ ë°˜ë³µ 
+	    		A = in.nextInt(); //  Aì„ ê°’ ë°›ìŒ
+	    		arr[A] = 1;  // arr[ë‚¸ì‚¬ëžŒë²ˆí˜¸] = 1 ë¡œ í•¨
 	    	}
 	    	
-	    	for(int i=1; i<arr.length; i++) { // i °¡ arr[³½»ç¶÷ ¼ö] ¸¸Å­ ¹Ýº¹ÇÔ
-	    		if(arr[i] != 1) { // ¸¸¾à arr[³½»ç¶÷ÀÌ ¹øÈ£°¡] = 1 ¾Æ´Ï¸é ¾È³½»ç¶÷ÀÓ
-	    			System.out.println(i); // ¾È³ÂÀ» ¶§ ¹øÈ£¸¦ Ãâ·ÂÇÔ
+	    	for(int i=1; i<arr.length; i++) { // i ê°€ arr[ë‚¸ì‚¬ëžŒ ìˆ˜] ë§Œí¼ ë°˜ë³µí•¨
+	    		if(arr[i] != 1) { // ë§Œì•½ arr[ë‚¸ì‚¬ëžŒì´ ë²ˆí˜¸ê°€] = 1 ì•„ë‹ˆë©´ ì•ˆë‚¸ì‚¬ëžŒìž„
+	    			System.out.println(i); // ì•ˆëƒˆì„ ë•Œ ë²ˆí˜¸ë¥¼ ì¶œë ¥í•¨
 	    		}
 	    	}
-	    	in.close(); // ½ºÄ³³Ê Á¾·á
+	    	in.close(); // ìŠ¤ìºë„ˆ ì¢…ë£Œ
 	    	
 	    }
 
@@ -46,26 +46,26 @@ public class step_04_07 {
 
 class step_04_07_01 {
 
-    public static void main(String[] args) throws IOException { // Null ¿¹¿Ü Ã³¸®
+    public static void main(String[] args) throws IOException { // Null ì˜ˆì™¸ ì²˜ë¦¬
         
     	
-    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // ¹öÆÛ ¼±¾ð
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // ë²„í¼ ì„ ì–¸
     	
-    	boolean[] arr = new boolean[31]; // 0¹øÀº ¾øÀ¸´Ï±î 1~30¹ø±îÁö ÀÖÀ¸·Á¸é °ø°£ÀÌ 31 °³ ÇÊ¿äÇÔ
+    	boolean[] arr = new boolean[31]; // 0ë²ˆì€ ì—†ìœ¼ë‹ˆê¹Œ 1~30ë²ˆê¹Œì§€ ìžˆìœ¼ë ¤ë©´ ê³µê°„ì´ 31 ê°œ í•„ìš”í•¨
     	
-    	for(int i=0; i<28; i++) { // º¯¼ö i ´Â 0~28¹ø ¹Ì¸¸ÀÌ¹Ç·Î ÃÑ 28¹øÀ» ¹Ýº¹ÇÔ. ±×·³ 2°³ È£Ãâ°¡´É
-    		StringTokenizer st = new StringTokenizer(br.readLine(), " "); // °³Çà ¹× " " ¸¶´Ù³ª´®
-    		int A = Integer.parseInt(st.nextToken()); // º¯¼ö A¿¡ °è¼Ó ÇÐ»ý¹øÈ£¸¦ ¹ÞÀ½   	 	
-	    	arr[A] = true; // arr[ÇÐ»ý¹øÈ£]¸¦ true·Î ³Ö¾îÁÜ
+    	for(int i=0; i<28; i++) { // ë³€ìˆ˜ i ëŠ” 0~28ë²ˆ ë¯¸ë§Œì´ë¯€ë¡œ ì´ 28ë²ˆì„ ë°˜ë³µí•¨. ê·¸ëŸ¼ 2ê°œ í˜¸ì¶œê°€ëŠ¥
+    		StringTokenizer st = new StringTokenizer(br.readLine(), " "); // ê°œí–‰ ë° " " ë§ˆë‹¤ë‚˜ëˆ”
+    		int A = Integer.parseInt(st.nextToken()); // ë³€ìˆ˜ Aì— ê³„ì† í•™ìƒë²ˆí˜¸ë¥¼ ë°›ìŒ   	 	
+	    	arr[A] = true; // arr[í•™ìƒë²ˆí˜¸]ë¥¼ trueë¡œ ë„£ì–´ì¤Œ
     	}
     	
-    	for(int i=1; i<arr.length; i++) { // i°¡ 1ºÎÅÍÀÎ ÀÌÀ¯´Â 0¹ø ÇÐ»ýÀº ¾øÀ½
-    		if(arr[i] != true) { // arr[ÇÐ»ý ¹øÈ£] °¡ true°¡ ¾Æ´Ï¸é °úÁ¦ ¾ÈÇÑ ÇÐ»ýÀÓ
-    			System.out.println(i); // °úÁ¦ ¾ÈÇÑ ÇÐ»ýÀÇ ¹øÈ£¸¦ È£Ãâ
+    	for(int i=1; i<arr.length; i++) { // iê°€ 1ë¶€í„°ì¸ ì´ìœ ëŠ” 0ë²ˆ í•™ìƒì€ ì—†ìŒ
+    		if(arr[i] != true) { // arr[í•™ìƒ ë²ˆí˜¸] ê°€ trueê°€ ì•„ë‹ˆë©´ ê³¼ì œ ì•ˆí•œ í•™ìƒìž„
+    			System.out.println(i); // ê³¼ì œ ì•ˆí•œ í•™ìƒì˜ ë²ˆí˜¸ë¥¼ í˜¸ì¶œ
     		}
 
     	}
-    	br.close(); // ¹öÆÛÁ¾·á
+    	br.close(); // ë²„í¼ì¢…ë£Œ
     	
     }
 

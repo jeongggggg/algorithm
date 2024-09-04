@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
-	2588. °ö¼À
-	(¼¼ ÀÚ¸® ¼ö) ¡¿ (¼¼ ÀÚ¸® ¼ö) °ö¼ÀÀÏ ¶§ À§Ä¡¿¡ µû¸¥ µé¾î°¥ °ª ±¸ÇÏ±â.
+	2588. ê³±ì…ˆ
+	(ì„¸ ìë¦¬ ìˆ˜) Ã— (ì„¸ ìë¦¬ ìˆ˜) ê³±ì…ˆì¼ ë•Œ ìœ„ì¹˜ì— ë”°ë¥¸ ë“¤ì–´ê°ˆ ê°’ êµ¬í•˜ê¸°.
 */
 
-//Scanner »ç¿ë
+//Scanner ì‚¬ìš©
 public class step_01_10 {
 
 	public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class step_01_10 {
 	}
 }
 
-//Scanner »ç¿ë
+//Scanner ì‚¬ìš©
 class step_01_10_01 {
 	
 	public static void main(String[] args) {
@@ -47,7 +47,7 @@ class step_01_10_01 {
 	}
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_01_10_02 {
 	
 	public static void main(String[] args) throws IOException {
@@ -95,5 +95,3 @@ class step_01_10_03 {
 	}
 }
 	
-
-

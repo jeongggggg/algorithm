@@ -9,8 +9,8 @@ import java.io.OutputStreamWriter;
 
 /*
  	11021. A+B - 7
- 	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ÞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
- 	°¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù "Case #x: "¸¦ Ãâ·ÂÇÑ ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÑ´Ù. Å×½ºÆ® ÄÉÀÌ½º ¹øÈ£´Â 1ºÎÅÍ ½ÃÀÛÇÑ´Ù.
+ 	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ìž…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+ 	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ "Case #x: "ë¥¼ ì¶œë ¥í•œ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•œë‹¤. í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ë²ˆí˜¸ëŠ” 1ë¶€í„° ì‹œìž‘í•œë‹¤.
 */
 
 public class step_03_07 {
@@ -33,8 +33,8 @@ public class step_03_07 {
 
 }
 
-// BufferedReader »ç¿ë, ¹®ÀÚ¿­ ºÐ¸® StringTokenizer 
-// ¹Ýµå½Ã ÀÚ·áÇü Å¸ÀÔÀ» Àß º¸¾Æ¾ß ÇÔ. st.nextToken() Àº ¹®ÀÚ¿­À» ¹ÝÈ¯ÇÏ´Ï Integer.parseInt()·Î int ÇüÀ¸·Î º¯È¯
+// BufferedReader ì‚¬ìš©, ë¬¸ìžì—´ ë¶„ë¦¬ StringTokenizer 
+// ë°˜ë“œì‹œ ìžë£Œí˜• íƒ€ìž…ì„ ìž˜ ë³´ì•„ì•¼ í•¨. st.nextToken() ì€ ë¬¸ìžì—´ì„ ë°˜í™˜í•˜ë‹ˆ Integer.parseInt()ë¡œ int í˜•ìœ¼ë¡œ ë³€í™˜
 class step_03_07_01 {
 
 	public static void main(String args[]) throws IOException {
@@ -85,8 +85,8 @@ class step_03_07_02 {
 
 // BufferedWriter
 /*
-	BufferedWriter.write() ¸Þ¼Òµå´Â ´Üµ¶À¸·Î int Çü °ª¸¸ ³ÖÀ»°æ¿ì ÀÌ´Â ¾Æ½ºÅ° ÄÚµå°ªÀ¸·Î ÀÎ½ÄµÇ±â ¶§¹®¿¡ ´Ù¸¥ ¹®ÀÚ°¡ ³ª¿Í¹ö¸°´Ù. 
-	±×·¯´Ï ÀÌ¸¦ ¹æÁöÇÏ°í ½Í´Ù¸é ¹Ýµå½Ã ¹®ÀÚ¿­°ú int ÇüÀ» ÇÔ²² ³Ö¾îÁà¾ß int °ªÀ» Á¦´ë·Î Ãâ·ÂÇÒ ¼ö ÀÖ´Ù.
+	BufferedWriter.write() ë©”ì†Œë“œëŠ” ë‹¨ë…ìœ¼ë¡œ int í˜• ê°’ë§Œ ë„£ì„ê²½ìš° ì´ëŠ” ì•„ìŠ¤í‚¤ ì½”ë“œê°’ìœ¼ë¡œ ì¸ì‹ë˜ê¸° ë•Œë¬¸ì— ë‹¤ë¥¸ ë¬¸ìžê°€ ë‚˜ì™€ë²„ë¦°ë‹¤. 
+	ê·¸ëŸ¬ë‹ˆ ì´ë¥¼ ë°©ì§€í•˜ê³  ì‹¶ë‹¤ë©´ ë°˜ë“œì‹œ ë¬¸ìžì—´ê³¼ int í˜•ì„ í•¨ê»˜ ë„£ì–´ì¤˜ì•¼ int ê°’ì„ ì œëŒ€ë¡œ ì¶œë ¥í•  ìˆ˜ ìžˆë‹¤.
 */ 
 class step_03_07_03 {
 
@@ -111,17 +111,17 @@ class step_03_07_03 {
 
 }
 
-// Âü°íÇØ¼­ ¼º´É °³¼±
+// ì°¸ê³ í•´ì„œ ì„±ëŠ¥ ê°œì„ 
 /*
- 	A ¿Í B ´Â "¹«Á¶°Ç" ÇÑ ÀÚ¸´¼ö¸¸ ÀÔ·Â¹Þ±â ¶§¹®¿¡ ¹®ÀÚ¿­·Î ÀÔ·Â¹ÞÀ»½Ã °ø¹éÀÌ µé¾î°¡´Â À§Ä¡´Â ¾ðÁ¦³ª °íÁ¤µÇ¾îÀÖ´Ù.
-	±×·³ ¹®ÀÚ¿­ÀÇ Æ¯Á¤ À§Ä¡ÀÇ ¹®ÀÚ¸¦ ¹ÝÈ¯ÇØÁÖ´Â charAt() À» ¾µ ¼ö ÀÖ´Ù¸é 
-	StringTokenizer °´Ã¼¸¦ °è¼Ó »ý¼ºÇÏÁö ¾Ê¾Æµµ µÇ±â¿¡ ½Ã°£ÀÌ ´õ¿í ´ÜÃà µÉ ¼ö ÀÖÀ» °Í
+ 	A ì™€ B ëŠ” "ë¬´ì¡°ê±´" í•œ ìžë¦¿ìˆ˜ë§Œ ìž…ë ¥ë°›ê¸° ë•Œë¬¸ì— ë¬¸ìžì—´ë¡œ ìž…ë ¥ë°›ì„ì‹œ ê³µë°±ì´ ë“¤ì–´ê°€ëŠ” ìœ„ì¹˜ëŠ” ì–¸ì œë‚˜ ê³ ì •ë˜ì–´ìžˆë‹¤.
+	ê·¸ëŸ¼ ë¬¸ìžì—´ì˜ íŠ¹ì • ìœ„ì¹˜ì˜ ë¬¸ìžë¥¼ ë°˜í™˜í•´ì£¼ëŠ” charAt() ì„ ì“¸ ìˆ˜ ìžˆë‹¤ë©´ 
+	StringTokenizer ê°ì²´ë¥¼ ê³„ì† ìƒì„±í•˜ì§€ ì•Šì•„ë„ ë˜ê¸°ì— ì‹œê°„ì´ ë”ìš± ë‹¨ì¶• ë  ìˆ˜ ìžˆì„ ê²ƒ
 	
-	½Ç¼ö ÇÒ ¼ö ÀÖ´Â ºÎºÐÀÌ String.charAt() Àº ÇØ´ç À§Ä¡ÀÇ ¹®ÀÚ¸¦ char ·Î ¹ÝÈ¯ÇÑ´Ù.
-	Áï ¸¸¾à 0ÀÌ¶ó´Â ¹®ÀÚ¿­ÀÌ ¹ÝÈ¯µÇ¸é ¾Æ½ºÅ° ÄÚµå°ªÀÎ 48ÀÌ ¹ÝÈ¯µÈ´Ù.
-	ÀÌ¸¦ intÇüÀ¸·Î ¿¬»êÇÏ·Á°í ÇÏ°Å³ª ¹®ÀÚ Ãâ·ÂÀÌ ¾Æ´Ñ Á¤¼ö·Î Ãâ·ÂÇÏ·Á ÇÏ¸é 0 ÀÌ¶ó´Â ¼ýÀÚ°¡ ¾Æ´Ñ 48·Î Ãâ·ÂµÈ´Ù.
-	±×·¯´Ï ¿¹·Îµé¾î ¹®ÀÚ '6' À» ¼ýÀÚ 6 À¸·Î ¹Ù²Ù°í ½Í´Ù¸é 48À» »©ÁÖ¸é µÈ´Ù.
-	¸¸¾à ¸îÀ» »©Áà¾ßÇÒÁö ¸ð¸¥´Ù¸é -'0' À¸·Î ÇØµµ µÈ´Ù.
+	ì‹¤ìˆ˜ í•  ìˆ˜ ìžˆëŠ” ë¶€ë¶„ì´ String.charAt() ì€ í•´ë‹¹ ìœ„ì¹˜ì˜ ë¬¸ìžë¥¼ char ë¡œ ë°˜í™˜í•œë‹¤.
+	ì¦‰ ë§Œì•½ 0ì´ë¼ëŠ” ë¬¸ìžì—´ì´ ë°˜í™˜ë˜ë©´ ì•„ìŠ¤í‚¤ ì½”ë“œê°’ì¸ 48ì´ ë°˜í™˜ëœë‹¤.
+	ì´ë¥¼ intí˜•ìœ¼ë¡œ ì—°ì‚°í•˜ë ¤ê³  í•˜ê±°ë‚˜ ë¬¸ìž ì¶œë ¥ì´ ì•„ë‹Œ ì •ìˆ˜ë¡œ ì¶œë ¥í•˜ë ¤ í•˜ë©´ 0 ì´ë¼ëŠ” ìˆ«ìžê°€ ì•„ë‹Œ 48ë¡œ ì¶œë ¥ëœë‹¤.
+	ê·¸ëŸ¬ë‹ˆ ì˜ˆë¡œë“¤ì–´ ë¬¸ìž '6' ì„ ìˆ«ìž 6 ìœ¼ë¡œ ë°”ê¾¸ê³  ì‹¶ë‹¤ë©´ 48ì„ ë¹¼ì£¼ë©´ ëœë‹¤.
+	ë§Œì•½ ëª‡ì„ ë¹¼ì¤˜ì•¼í• ì§€ ëª¨ë¥¸ë‹¤ë©´ -'0' ìœ¼ë¡œ í•´ë„ ëœë‹¤.
 */
 class step_03_07_04 {
 
@@ -142,4 +142,4 @@ class step_03_07_04 {
 
 }
 
-// Âü°í : https://st-lab.tistory.com/33
+// ì°¸ê³  : https://st-lab.tistory.com/33

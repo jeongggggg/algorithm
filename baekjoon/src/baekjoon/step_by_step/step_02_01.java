@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 /*
-	1330. µÎ ¼ö ºñ±³ÇÏ±â
-	¹®Á¦ : µÎ Á¤¼ö A¿Í B°¡ ÁÖ¾îÁ³À» ¶§, A¿Í B¸¦ ºñ±³ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	ÀÔ·Â : Ã¹Â° ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. A¿Í B´Â °ø¹é ÇÑ Ä­À¸·Î ±¸ºÐµÇ¾îÁ® ÀÖ´Ù.
+	1330. ë‘ ìˆ˜ ë¹„êµí•˜ê¸°
+	ë¬¸ì œ : ë‘ ì •ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì¡Œì„ ë•Œ, Aì™€ Bë¥¼ ë¹„êµí•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ìž…ë ¥ : ì²«ì§¸ ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. Aì™€ BëŠ” ê³µë°± í•œ ì¹¸ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ì ¸ ìžˆë‹¤.
 	
-	Ãâ·Â : Ã¹Â° ÁÙ¿¡ ´ÙÀ½ ¼¼ °¡Áö Áß ÇÏ³ª¸¦ Ãâ·ÂÇÑ´Ù.
-		- A°¡ Bº¸´Ù Å« °æ¿ì¿¡´Â '>'¸¦ Ãâ·ÂÇÑ´Ù.
-		- A°¡ Bº¸´Ù ÀÛÀº °æ¿ì¿¡´Â '<'¸¦ Ãâ·ÂÇÑ´Ù.
-		- A¿Í B°¡ °°Àº °æ¿ì¿¡´Â '=='¸¦ Ãâ·ÂÇÑ´Ù.
+	ì¶œë ¥ : ì²«ì§¸ ì¤„ì— ë‹¤ìŒ ì„¸ ê°€ì§€ ì¤‘ í•˜ë‚˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		- Aê°€ Bë³´ë‹¤ í° ê²½ìš°ì—ëŠ” '>'ë¥¼ ì¶œë ¥í•œë‹¤.
+		- Aê°€ Bë³´ë‹¤ ìž‘ì€ ê²½ìš°ì—ëŠ” '<'ë¥¼ ì¶œë ¥í•œë‹¤.
+		- Aì™€ Bê°€ ê°™ì€ ê²½ìš°ì—ëŠ” '=='ë¥¼ ì¶œë ¥í•œë‹¤.
 */
 
 public class step_02_01 {
@@ -35,7 +35,7 @@ public class step_02_01 {
 	}
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_02_01_01 {
 	
 	public static void main(String[] args) throws IOException {
@@ -51,7 +51,7 @@ class step_02_01_01 {
 	}
 }
 
-//±»ÀÌ String º¯¼ö »ý¼º ¾ÈÇÏ°í ÀÔ·Â°ú µ¿½Ã¿¡ ±¸ºÐÀÚ·Î ºÐ¸®ÇØÁàµµ µÈ´Ù.
+//êµ³ì´ String ë³€ìˆ˜ ìƒì„± ì•ˆí•˜ê³  ìž…ë ¥ê³¼ ë™ì‹œì— êµ¬ë¶„ìžë¡œ ë¶„ë¦¬í•´ì¤˜ë„ ëœë‹¤.
 class step_02_01_02 {
 	public static void main(String[] args) throws IOException {
 	
@@ -64,7 +64,7 @@ class step_02_01_02 {
 	}
 }
 
-//»ïÇ×¿¬»êÀÚ »ç¿ë
+//ì‚¼í•­ì—°ì‚°ìž ì‚¬ìš©
 class step_02_01_03 {
 	public static void main(String[] args) throws IOException {
 	

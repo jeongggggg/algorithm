@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 
 /*
 	1001. A-B
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A-B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A-Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 */ 
 
-// Scanner »ç¿ë½Ã
+// Scanner ì‚¬ìš©ì‹œ
 public class step_01_03 {
 
 	public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class step_01_03 {
 	}
 }
 
-//BufferedReader »ç¿ë½Ã
+//BufferedReader ì‚¬ìš©ì‹œ
 class step_01_03_01 {
 	
 	 public static void main(String[] args) throws IOException{
@@ -38,4 +38,3 @@ class step_01_03_01 {
 	      System.out.println(a - b);
 	}
 }
-

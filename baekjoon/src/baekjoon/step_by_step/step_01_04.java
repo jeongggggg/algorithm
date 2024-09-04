@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-	10998. A¡¿B
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A¡¿B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	10998. AÃ—B
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, AÃ—Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 */ 
 
 
-//Scanner »ç¿ë
+//Scanner ì‚¬ìš©
 public class step_01_04 {
 	
 	 public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class step_01_04 {
 	    }
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_01_04_01 {
 	
 	public static void main(String[] args) throws IOException {

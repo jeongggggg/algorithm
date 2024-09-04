@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 
 /*
 	1000. A+B
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 */ 
 
 
-// Scanner »ç¿ë½Ã
+// Scanner ì‚¬ìš©ì‹œ
 public class step_01_02 {
 	
 	public static void main(String[] args) {
@@ -22,11 +22,11 @@ public class step_01_02 {
        
        System.out.println(a + b);
        
-       scan.close(); //new Scanner ¸¦ System.inÀ» ÇØÁÖ¾ú±â ¶§¹®¿¡ ¹İµå½Ã close ¸¦ ÇØÁÖ¾î¾ßÇÑ´Ù      
+       scan.close(); //new Scanner ë¥¼ System.inì„ í•´ì£¼ì—ˆê¸° ë•Œë¬¸ì— ë°˜ë“œì‹œ close ë¥¼ í•´ì£¼ì–´ì•¼í•œë‹¤      
 	}
 }
 
-//BufferedReader »ç¿ë½Ã
+//BufferedReader ì‚¬ìš©ì‹œ
 class step_01_02_01 {
 	
 	 public static void main(String[] args) throws IOException{

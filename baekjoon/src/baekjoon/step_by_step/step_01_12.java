@@ -5,8 +5,8 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 
 /*
-	10171. °í¾çÀÌ
-	¾Æ·¡ ¿¹Á¦¿Í °°ÀÌ °í¾çÀÌ¸¦ Ãâ·ÂÇÏ½Ã¿À.
+	10171. ê³ ì–‘ì´
+	ì•„ë˜ ì˜ˆì œì™€ ê°™ì´ ê³ ì–‘ì´ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
 	\    /\
 	 )  ( ')
 	(  /  )
@@ -47,7 +47,7 @@ class step_01_12_02 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
  
 		bw.write("\\    /\\");
-		bw.newLine();	// ÁÙ ±¸ºĞÀÚ
+		bw.newLine();	// ì¤„ êµ¬ë¶„ì
 		
 		bw.write(" )  ( ')");
 		bw.newLine();	

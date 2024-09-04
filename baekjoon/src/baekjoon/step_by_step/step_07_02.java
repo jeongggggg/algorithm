@@ -3,11 +3,11 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.*;
 /*
- 	2566.ÃÖ´ñ°ª 
- 	<±×¸² 1>°ú °°ÀÌ 9¡¿9 °ÝÀÚÆÇ¿¡ ¾²¿©Áø 81°³ÀÇ ÀÚ¿¬¼ö ¶Ç´Â 0ÀÌ ÁÖ¾îÁú ¶§, ÀÌµé Áß ÃÖ´ñ°ªÀ» Ã£°í ±× ÃÖ´ñ°ªÀÌ ¸î Çà ¸î ¿­¿¡ À§Ä¡ÇÑ ¼öÀÎÁö ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	¿¹¸¦ µé¾î, ´ÙÀ½°ú °°ÀÌ 81°³ÀÇ ¼ö°¡ ÁÖ¾îÁö¸é ÀÌµé Áß ÃÖ´ñ°ªÀº 90ÀÌ°í, ÀÌ °ªÀº 5Çà 7¿­¿¡ À§Ä¡ÇÑ´Ù.
-	Ã¹Â° ÁÙºÎÅÍ ¾ÆÈ© ¹øÂ° ÁÙ±îÁö ÇÑ ÁÙ¿¡ ¾ÆÈ© °³¾¿ ¼ö°¡ ÁÖ¾îÁø´Ù. ÁÖ¾îÁö´Â ¼ö´Â 100º¸´Ù ÀÛÀº ÀÚ¿¬¼ö ¶Ç´Â 0ÀÌ´Ù.
-	Ã¹Â° ÁÙ¿¡ ÃÖ´ñ°ªÀ» Ãâ·ÂÇÏ°í, µÑÂ° ÁÙ¿¡ ÃÖ´ñ°ªÀÌ À§Ä¡ÇÑ Çà ¹øÈ£¿Í ¿­ ¹øÈ£¸¦ ºóÄ­À» »çÀÌ¿¡ µÎ°í Â÷·Ê·Î Ãâ·ÂÇÑ´Ù. ÃÖ´ñ°ªÀÌ µÎ °³ ÀÌ»óÀÎ °æ¿ì ±× Áß ÇÑ °÷ÀÇ À§Ä¡¸¦ Ãâ·ÂÇÑ´Ù.
+ 	2566.ìµœëŒ“ê°’ 
+ 	<ê·¸ë¦¼ 1>ê³¼ ê°™ì´ 9Ã—9 ê²©ìžíŒì— ì“°ì—¬ì§„ 81ê°œì˜ ìžì—°ìˆ˜ ë˜ëŠ” 0ì´ ì£¼ì–´ì§ˆ ë•Œ, ì´ë“¤ ì¤‘ ìµœëŒ“ê°’ì„ ì°¾ê³  ê·¸ ìµœëŒ“ê°’ì´ ëª‡ í–‰ ëª‡ ì—´ì— ìœ„ì¹˜í•œ ìˆ˜ì¸ì§€ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ì˜ˆë¥¼ ë“¤ì–´, ë‹¤ìŒê³¼ ê°™ì´ 81ê°œì˜ ìˆ˜ê°€ ì£¼ì–´ì§€ë©´ ì´ë“¤ ì¤‘ ìµœëŒ“ê°’ì€ 90ì´ê³ , ì´ ê°’ì€ 5í–‰ 7ì—´ì— ìœ„ì¹˜í•œë‹¤.
+	ì²«ì§¸ ì¤„ë¶€í„° ì•„í™‰ ë²ˆì§¸ ì¤„ê¹Œì§€ í•œ ì¤„ì— ì•„í™‰ ê°œì”© ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì£¼ì–´ì§€ëŠ” ìˆ˜ëŠ” 100ë³´ë‹¤ ìž‘ì€ ìžì—°ìˆ˜ ë˜ëŠ” 0ì´ë‹¤.
+	ì²«ì§¸ ì¤„ì— ìµœëŒ“ê°’ì„ ì¶œë ¥í•˜ê³ , ë‘˜ì§¸ ì¤„ì— ìµœëŒ“ê°’ì´ ìœ„ì¹˜í•œ í–‰ ë²ˆí˜¸ì™€ ì—´ ë²ˆí˜¸ë¥¼ ë¹ˆì¹¸ì„ ì‚¬ì´ì— ë‘ê³  ì°¨ë¡€ë¡œ ì¶œë ¥í•œë‹¤. ìµœëŒ“ê°’ì´ ë‘ ê°œ ì´ìƒì¸ ê²½ìš° ê·¸ ì¤‘ í•œ ê³³ì˜ ìœ„ì¹˜ë¥¼ ì¶œë ¥í•œë‹¤.
 
 */
 
@@ -49,9 +49,9 @@ class step_07_02_01 {
 
 	public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int max = 0;  //ÃÖ´ñ°ª
-        int row = 1;  //Çà
-        int column = 1;  //¿­
+        int max = 0;  //ìµœëŒ“ê°’
+        int row = 1;  //í–‰
+        int column = 1;  //ì—´
 
         for (int i = 1; i <= 9; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());

@@ -2,7 +2,7 @@ package baekjoon.step_by_step;
 
 /*
 	2557. Hello World
-	Hello World!¸¦ Ãâ·ÂÇÏ½Ã¿À.
+	Hello World!ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
 */ 
 
 public class step_01_01 {

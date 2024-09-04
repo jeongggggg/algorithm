@@ -9,9 +9,9 @@ import java.io.OutputStreamWriter;
 
 /*
 	11022. A+B - 8
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	°¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù "Case #x: A + B = C" Çü½ÄÀ¸·Î Ãâ·ÂÇÑ´Ù. 
-	x´Â Å×½ºÆ® ÄÉÀÌ½º ¹øÈ£ÀÌ°í 1ºÎÅÍ ½ÃÀÛÇÏ¸ç, C´Â A+BÀÌ´Ù.
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ "Case #x: A + B = C" í˜•ì‹ìœ¼ë¡œ ì¶œë ¥í•œë‹¤. 
+	xëŠ” í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ë²ˆí˜¸ì´ê³  1ë¶€í„° ì‹œì‘í•˜ë©°, CëŠ” A+Bì´ë‹¤.
 */
 
 public class step_03_08 {
@@ -34,8 +34,8 @@ public class step_03_08 {
 
 }
 
-// BufferedReader »ç¿ë, ¹®ÀÚ¿­ ºĞ¸® StringTokenizer 
-// Ãß°¡ ¼³¸íÀº step_03_07 °ú °°À½
+// BufferedReader ì‚¬ìš©, ë¬¸ìì—´ ë¶„ë¦¬ StringTokenizer 
+// ì¶”ê°€ ì„¤ëª…ì€ step_03_07 ê³¼ ê°™ìŒ
 class step_03_08_01 {
 	
 	public static void main(String args[]) throws IOException {
@@ -59,7 +59,7 @@ class step_03_08_01 {
 }
 
 
-// À§ ÄÚµå¸¦ StringBuilder º¯°æÇÏ¿© »ç¿ë
+// ìœ„ ì½”ë“œë¥¼ StringBuilder ë³€ê²½í•˜ì—¬ ì‚¬ìš©
 class step_03_08_02 {
 	
 	public static void main(String args[]) throws IOException {
@@ -117,7 +117,7 @@ class step_03_08_03 {
 	
 }
 
-// Ãß°¡ °³¼± ÄÚµå 
+// ì¶”ê°€ ê°œì„  ì½”ë“œ 
 class step_03_08_04 {
 	
 	public static void main(String args[]) throws IOException {

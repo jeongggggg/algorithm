@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
-	2738. Çà·Ä µ¡¼À
-	N*MÅ©±âÀÇ µÎ Çà·Ä A¿Í B°¡ ÁÖ¾îÁ³À» ¶§, µÎ Çà·ÄÀ» ´õÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	Ã¹Â° ÁÙ¿¡ Çà·ÄÀÇ Å©±â N °ú MÀÌ ÁÖ¾îÁø´Ù. 
-	µÑÂ° ÁÙºÎÅÍ N°³ÀÇ ÁÙ¿¡ Çà·Ä AÀÇ ¿ø¼Ò M°³°¡ Â÷·Ê´ë·Î ÁÖ¾îÁø´Ù. 
-	ÀÌ¾î¼­ N°³ÀÇ ÁÙ¿¡ Çà·Ä BÀÇ ¿ø¼Ò M°³°¡ Â÷·Ê´ë·Î ÁÖ¾îÁø´Ù. 
-	N°ú MÀº 100º¸´Ù ÀÛ°Å³ª °°°í, Çà·ÄÀÇ ¿ø¼Ò´Â Àý´ñ°ªÀÌ 100º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-	Ã¹Â° ÁÙºÎÅÍ N°³ÀÇ ÁÙ¿¡ Çà·Ä A¿Í B¸¦ ´õÇÑ Çà·ÄÀ» Ãâ·ÂÇÑ´Ù. Çà·ÄÀÇ °¢ ¿ø¼Ò´Â °ø¹éÀ¸·Î ±¸ºÐÇÑ´Ù.
+	2738. í–‰ë ¬ ë§ì…ˆ
+	N*Mí¬ê¸°ì˜ ë‘ í–‰ë ¬ Aì™€ Bê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ë‘ í–‰ë ¬ì„ ë”í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ì²«ì§¸ ì¤„ì— í–‰ë ¬ì˜ í¬ê¸° N ê³¼ Mì´ ì£¼ì–´ì§„ë‹¤. 
+	ë‘˜ì§¸ ì¤„ë¶€í„° Nê°œì˜ ì¤„ì— í–‰ë ¬ Aì˜ ì›ì†Œ Mê°œê°€ ì°¨ë¡€ëŒ€ë¡œ ì£¼ì–´ì§„ë‹¤. 
+	ì´ì–´ì„œ Nê°œì˜ ì¤„ì— í–‰ë ¬ Bì˜ ì›ì†Œ Mê°œê°€ ì°¨ë¡€ëŒ€ë¡œ ì£¼ì–´ì§„ë‹¤. 
+	Nê³¼ Mì€ 100ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ê³ , í–‰ë ¬ì˜ ì›ì†ŒëŠ” ì ˆëŒ“ê°’ì´ 100ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+	ì²«ì§¸ ì¤„ë¶€í„° Nê°œì˜ ì¤„ì— í–‰ë ¬ Aì™€ Bë¥¼ ë”í•œ í–‰ë ¬ì„ ì¶œë ¥í•œë‹¤. í–‰ë ¬ì˜ ê° ì›ì†ŒëŠ” ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•œë‹¤.
 */
 
 public class step_07_01 {
@@ -19,29 +19,29 @@ public class step_07_01 {
 	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Çà·ÄÀÇ Å©±â N°ú M ÀÔ·Â
+        // í–‰ë ¬ì˜ í¬ê¸° Nê³¼ M ìž…ë ¥
         int N = scanner.nextInt();
         int M = scanner.nextInt();
 
-        // Çà·Ä A¿Í B ¼±¾ð ¹× ÃÊ±âÈ­
+        // í–‰ë ¬ Aì™€ B ì„ ì–¸ ë° ì´ˆê¸°í™”
         int[][] A = new int[N][M];
         int[][] B = new int[N][M];
 
-        // Çà·Ä A ÀÔ·Â
+        // í–‰ë ¬ A ìž…ë ¥
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 A[i][j] = scanner.nextInt();
             }
         }
 
-        // Çà·Ä B ÀÔ·Â
+        // í–‰ë ¬ B ìž…ë ¥
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 B[i][j] = scanner.nextInt();
             }
         }
 
-        // Çà·Ä A¿Í BÀÇ ÇÕÀ» °è»êÇÏ¿© Ãâ·Â
+        // í–‰ë ¬ Aì™€ Bì˜ í•©ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 System.out.print(A[i][j] + B[i][j] + " ");
@@ -58,16 +58,16 @@ class step_07_01_01 {
 	 public static void main(String[] args) throws IOException {
 	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	        // Çà·ÄÀÇ Å©±â N°ú M ÀÔ·Â
+	        // í–‰ë ¬ì˜ í¬ê¸° Nê³¼ M ìž…ë ¥
 	        String[] dimensions = br.readLine().split(" ");
 	        int N = Integer.parseInt(dimensions[0]);
 	        int M = Integer.parseInt(dimensions[1]);
 
-	        // Çà·Ä A¿Í B ¼±¾ð ¹× ÃÊ±âÈ­
+	        // í–‰ë ¬ Aì™€ B ì„ ì–¸ ë° ì´ˆê¸°í™”
 	        int[][] A = new int[N][M];
 	        int[][] B = new int[N][M];
 
-	        // Çà·Ä A ÀÔ·Â
+	        // í–‰ë ¬ A ìž…ë ¥
 	        for (int i = 0; i < N; i++) {
 	            String[] line = br.readLine().split(" ");
 	            for (int j = 0; j < M; j++) {
@@ -75,7 +75,7 @@ class step_07_01_01 {
 	            }
 	        }
 
-	        // Çà·Ä B ÀÔ·Â
+	        // í–‰ë ¬ B ìž…ë ¥
 	        for (int i = 0; i < N; i++) {
 	            String[] line = br.readLine().split(" ");
 	            for (int j = 0; j < M; j++) {
@@ -83,7 +83,7 @@ class step_07_01_01 {
 	            }
 	        }
 
-	        // Çà·Ä A¿Í BÀÇ ÇÕÀ» °è»êÇÏ¿© Ãâ·Â
+	        // í–‰ë ¬ Aì™€ Bì˜ í•©ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥
 	        StringBuilder sb = new StringBuilder();
 	        for (int i = 0; i < N; i++) {
 	            for (int j = 0; j < M; j++) {

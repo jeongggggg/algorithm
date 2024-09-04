@@ -7,18 +7,18 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 /*
-	10818. ÃÖ¼Ò, ÃÖ´ë
-	¹®Á¦ : N°³ÀÇ Á¤¼ö°¡ ÁÖ¾îÁø´Ù. ÀÌ¶§, ÃÖ¼Ú°ª°ú ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	10818. ìµœì†Œ, ìµœëŒ€
+	ë¬¸ì œ : Nê°œì˜ ì •ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, ìµœì†Ÿê°’ê³¼ ìµœëŒ“ê°’ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	ÀÔ·Â :Ã¹Â° ÁÙ¿¡ Á¤¼öÀÇ °³¼ö N (1 ¡Â N ¡Â 1,000,000)ÀÌ ÁÖ¾îÁø´Ù. 
-	µÑÂ° ÁÙ¿¡´Â N°³ÀÇ Á¤¼ö¸¦ °ø¹éÀ¸·Î ±¸ºÐÇØ¼­ ÁÖ¾îÁø´Ù. 
-	¸ðµç Á¤¼ö´Â -1,000,000º¸´Ù Å©°Å³ª °°°í, 1,000,000º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
+	ìž…ë ¥ :ì²«ì§¸ ì¤„ì— ì •ìˆ˜ì˜ ê°œìˆ˜ N (1 â‰¤ N â‰¤ 1,000,000)ì´ ì£¼ì–´ì§„ë‹¤. 
+	ë‘˜ì§¸ ì¤„ì—ëŠ” Nê°œì˜ ì •ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ì„œ ì£¼ì–´ì§„ë‹¤. 
+	ëª¨ë“  ì •ìˆ˜ëŠ” -1,000,000ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 1,000,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
 	
-	Ãâ·Â : Ã¹Â° ÁÙ¿¡ ÁÖ¾îÁø Á¤¼ö N°³ÀÇ ÃÖ¼Ú°ª°ú ÃÖ´ñ°ªÀ» °ø¹éÀ¸·Î ±¸ºÐÇØ Ãâ·ÂÇÑ´Ù.
+	ì¶œë ¥ : ì²«ì§¸ ì¤„ì— ì£¼ì–´ì§„ ì •ìˆ˜ Nê°œì˜ ìµœì†Ÿê°’ê³¼ ìµœëŒ“ê°’ì„ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤.
 */
 
 
-// ¹è¿­ + Scanner
+// ë°°ì—´ + Scanner
 public class step_04_03 {
 
 	public static void main(String[] args) {
@@ -39,10 +39,10 @@ public class step_04_03 {
 
 }
 
-// ¹è¿­ + BufferedReader
-// ¹Ýµå½Ã ÀÚ·áÇü Å¸ÀÔ È®ÀÎÀÌ ÇÊ¿ä, st.nextToken() Àº ¹®ÀÚ¿­À» ¹ÝÈ¯ÇÏ´Ï Integer.parseInt()·Î int ÇüÀ¸·Î º¯È¯
-// ÀÔ·Â¹ÞÀº Á¤¼öµéÀ» ¹è¿­¿¡ ÀúÀåÇÏ±â À§ÇØ¼­ StringToken ¿¡ µé¾îÀÖ´Â ¸ðµç ÅäÅ«µéÀÌ ¾ø¾îÁú ¶§±îÁö ¹è¿­¿¡ ¸ðµÎ ´ã´Â´Ù.
-//hasMoreTokens() ´Â StringTokenizer ¿¡ ÅäÅ«ÀÌ ³²¾ÆÀÖÀ¸¸é true, ºñ¾îÀÖÀ¸¸é false¸¦ ¹ÝÈ¯
+// ë°°ì—´ + BufferedReader
+// ë°˜ë“œì‹œ ìžë£Œí˜• íƒ€ìž… í™•ì¸ì´ í•„ìš”, st.nextToken() ì€ ë¬¸ìžì—´ì„ ë°˜í™˜í•˜ë‹ˆ Integer.parseInt()ë¡œ int í˜•ìœ¼ë¡œ ë³€í™˜
+// ìž…ë ¥ë°›ì€ ì •ìˆ˜ë“¤ì„ ë°°ì—´ì— ì €ìž¥í•˜ê¸° ìœ„í•´ì„œ StringToken ì— ë“¤ì–´ìžˆëŠ” ëª¨ë“  í† í°ë“¤ì´ ì—†ì–´ì§ˆ ë•Œê¹Œì§€ ë°°ì—´ì— ëª¨ë‘ ë‹´ëŠ”ë‹¤.
+//hasMoreTokens() ëŠ” StringTokenizer ì— í† í°ì´ ë‚¨ì•„ìžˆìœ¼ë©´ true, ë¹„ì–´ìžˆìœ¼ë©´ falseë¥¼ ë°˜í™˜
 class step_04_03_01 {
 	
 	public static void main(String[] args) throws IOException {
@@ -64,19 +64,19 @@ class step_04_03_01 {
 	
 }
 
-// ¹è¿­ + BufferedReader
+// ë°°ì—´ + BufferedReader
 /*
- * 1. ¹è¿­À» »ç¿ëÇÏÁö ¾Ê´Â´Ù.
- * 2. ÀÔ·Â¹ÞÀº ¹®ÀÚ¸¦ Áï½Ã ºñ±³ÇÑ´Ù. ( ±×·¯¸é ½Ã°£º¹Àâµµ°¡ N À¸·Î Á¤·ÄÇÒ ÇÊ¿ä ¾ø¾î ½Ã°£À» ´ÜÃà½ÃÅ³ ¼ö ÀÖÀ½ )
+ * 1. ë°°ì—´ì„ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤.
+ * 2. ìž…ë ¥ë°›ì€ ë¬¸ìžë¥¼ ì¦‰ì‹œ ë¹„êµí•œë‹¤. ( ê·¸ëŸ¬ë©´ ì‹œê°„ë³µìž¡ë„ê°€ N ìœ¼ë¡œ ì •ë ¬í•  í•„ìš” ì—†ì–´ ì‹œê°„ì„ ë‹¨ì¶•ì‹œí‚¬ ìˆ˜ ìžˆìŒ )
 */
-//  ºñ±³¸¦ À§ÇØ max ¿¡´Â °¡Àå ÀÛÀº °ªÀ¸·Î, min ¿¡´Â °¡Àå Å« °ªÀ¸·Î ÃÊ±âÈ­
-// ¹Ýº¹¹®¿¡¼­ °¢ ÅäÅ«À» °¡Á®¿Í ±âÁ¸ max ÀÇ °ªº¸´Ù Å«Áö, ±âÁ¸ min ÀÇ °ªº¸´Ù ÀÛÀºÁö ºñ±³ÇÏ¸é¼­ ¼öÇà
+//  ë¹„êµë¥¼ ìœ„í•´ max ì—ëŠ” ê°€ìž¥ ìž‘ì€ ê°’ìœ¼ë¡œ, min ì—ëŠ” ê°€ìž¥ í° ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
+// ë°˜ë³µë¬¸ì—ì„œ ê° í† í°ì„ ê°€ì ¸ì™€ ê¸°ì¡´ max ì˜ ê°’ë³´ë‹¤ í°ì§€, ê¸°ì¡´ min ì˜ ê°’ë³´ë‹¤ ìž‘ì€ì§€ ë¹„êµí•˜ë©´ì„œ ìˆ˜í–‰
 class step_04_03_02 {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
  
-		Integer.parseInt(br.readLine());	//Ã¹ ÁÙ N Àº ¾È¾²ÀÌ¹Ç·Î ÀÔ·Â¸¸ ¹Þ´Â´Ù.
+		Integer.parseInt(br.readLine());	//ì²« ì¤„ N ì€ ì•ˆì“°ì´ë¯€ë¡œ ìž…ë ¥ë§Œ ë°›ëŠ”ë‹¤.
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		
 		int max = -1000001;

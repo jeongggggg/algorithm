@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 /*
 	1008. A/B
-	µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A/B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A/Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 */ 
 
-// Scanner »ç¿ë 
+// Scanner ì‚¬ìš© 
 public class step_01_06 {
 	
  	public static void main(String[] args) {
@@ -28,17 +28,17 @@ public class step_01_06 {
 	}
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_01_06_01 {
 	
 	public static void main(String[] args) throws IOException {
 	
-	      BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));  // ¼±¾ğ
+	      BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));  // ì„ ì–¸
 	
 		  String s = bf.readLine();
-		  StringTokenizer st = new StringTokenizer(s);  //StringTokenizerÀÎÀÚ°ª¿¡ ÀÔ·Â ¹®ÀÚ¿­ ³ÖÀ½
-		  int a = Integer.parseInt(st.nextToken());  //Ã¹¹øÂ° È£Ãâ
-		  int b = Integer.parseInt(st.nextToken());  //µÎ¹øÂ° È£Ãâ
+		  StringTokenizer st = new StringTokenizer(s);  //StringTokenizerì¸ìê°’ì— ì…ë ¥ ë¬¸ìì—´ ë„£ìŒ
+		  int a = Integer.parseInt(st.nextToken());  //ì²«ë²ˆì§¸ í˜¸ì¶œ
+		  int b = Integer.parseInt(st.nextToken());  //ë‘ë²ˆì§¸ í˜¸ì¶œ
 		
 		      System.out.println(a+b);
 		      System.out.println(a-b);
@@ -49,7 +49,7 @@ class step_01_06_01 {
 }
 
 
-//BufferedWriter »ç¿ë
+//BufferedWriter ì‚¬ìš©
 class step_01_06_02 {
 	
    public static void main(String[] args) throws IOException {
@@ -72,7 +72,7 @@ class step_01_06_02 {
 	} 
 }
 
-//StringBuilder »ç¿ë
+//StringBuilder ì‚¬ìš©
 class step_01_06_03 {
 	
 	 public static void main(String[] args) {

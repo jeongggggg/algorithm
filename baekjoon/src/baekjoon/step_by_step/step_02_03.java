@@ -7,14 +7,14 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 /*
-	2753. À±³â
-	¿¬µµ°¡ ÁÖ¾îÁ³À» ¶§, À±³âÀÌ¸é 1, ¾Æ´Ï¸é 0À» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-	À±³âÀº ¿¬µµ°¡ 4ÀÇ ¹è¼öÀÌ¸é¼­, 100ÀÇ ¹è¼ö°¡ ¾Æ´Ò ¶§ ¶Ç´Â 400ÀÇ ¹è¼öÀÏ ¶§ÀÌ´Ù.
-	¿¹¸¦ µé¾î, 2012³âÀº 4ÀÇ ¹è¼öÀÌ¸é¼­ 100ÀÇ ¹è¼ö°¡ ¾Æ´Ï¶ó¼­ À±³âÀÌ´Ù. 
-	1900³âÀº 100ÀÇ ¹è¼öÀÌ°í 400ÀÇ ¹è¼ö´Â ¾Æ´Ï±â ¶§¹®¿¡ À±³âÀÌ ¾Æ´Ï´Ù. 
-	ÇÏÁö¸¸, 2000³âÀº 400ÀÇ ¹è¼öÀÌ±â ¶§¹®¿¡ À±³âÀÌ´Ù.
+	2753. ìœ¤ë…„
+	ì—°ë„ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ìœ¤ë…„ì´ë©´ 1, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+	ìœ¤ë…„ì€ ì—°ë„ê°€ 4ì˜ ë°°ìˆ˜ì´ë©´ì„œ, 100ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ ë•Œ ë˜ëŠ” 400ì˜ ë°°ìˆ˜ì¼ ë•Œì´ë‹¤.
+	ì˜ˆë¥¼ ë“¤ì–´, 2012ë…„ì€ 4ì˜ ë°°ìˆ˜ì´ë©´ì„œ 100ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë¼ì„œ ìœ¤ë…„ì´ë‹¤. 
+	1900ë…„ì€ 100ì˜ ë°°ìˆ˜ì´ê³  400ì˜ ë°°ìˆ˜ëŠ” ì•„ë‹ˆê¸° ë•Œë¬¸ì— ìœ¤ë…„ì´ ì•„ë‹ˆë‹¤. 
+	í•˜ì§€ë§Œ, 2000ë…„ì€ 400ì˜ ë°°ìˆ˜ì´ê¸° ë•Œë¬¸ì— ìœ¤ë…„ì´ë‹¤.
 	
-	Ã¹Â° ÁÙ¿¡ ¿¬µµ°¡ ÁÖ¾îÁø´Ù. ¿¬µµ´Â 1º¸´Ù Å©°Å³ª °°°í, 4000º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù.
+	ì²«ì§¸ ì¤„ì— ì—°ë„ê°€ ì£¼ì–´ì§„ë‹¤. ì—°ë„ëŠ” 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 4000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ìžì—°ìˆ˜ì´ë‹¤.
 */
 
 public class step_02_03 {
@@ -36,7 +36,7 @@ public class step_02_03 {
 	
 }
 
-//»ïÇ×¿¬»êÀÚ »ç¿ë
+//ì‚¼í•­ì—°ì‚°ìž ì‚¬ìš©
 class step_02_03_01 {
 	public static void main(String[] args) {
 		
@@ -65,7 +65,7 @@ class step_02_03_02 {
 		else System.out.println("0");
 		
 		
-		//»ïÇ× ¿¬»êÀÚ »ç¿ë
+		//ì‚¼í•­ ì—°ì‚°ìž ì‚¬ìš©
 		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
 		 
 		int y1 = Integer.parseInt(br1.readLine());

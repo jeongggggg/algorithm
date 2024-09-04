@@ -9,9 +9,9 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /*
-	11382. ²¿¸¶ Á¤¹Î
-	²¿¸¶ Á¤¹ÎÀÌ´Â ÀÌÁ¦ A + B Á¤µµ´Â ½±°Ô °è»êÇÒ ¼ö ÀÖ´Ù. ÀÌÁ¦ A + B + C¸¦ °è»êÇÒ Â÷·ÊÀÌ´Ù!
-	Ã¹ ¹øÂ° ÁÙ¿¡ A, B, C (1 ¡Â A, B, C ¡Â 10^12)ÀÌ °ø¹éÀ» »çÀÌ¿¡ µÎ°í ÁÖ¾îÁø´Ù.
+	11382. ê¼¬ë§ˆ ì •ë¯¼
+	ê¼¬ë§ˆ ì •ë¯¼ì´ëŠ” ì´ì œ A + B ì •ë„ëŠ” ì‰½ê²Œ ê³„ì‚°í•  ìˆ˜ ìˆë‹¤. ì´ì œ A + B + Cë¥¼ ê³„ì‚°í•  ì°¨ë¡€ì´ë‹¤!
+	ì²« ë²ˆì§¸ ì¤„ì— A, B, C (1 â‰¤ A, B, C â‰¤ 10^12)ì´ ê³µë°±ì„ ì‚¬ì´ì— ë‘ê³  ì£¼ì–´ì§„ë‹¤.
 */
 
 public class step_01_11 {
@@ -30,7 +30,7 @@ public class step_01_11 {
 	}
 }
 
-//BufferedReader »ç¿ë
+//BufferedReader ì‚¬ìš©
 class step_01_11_01 {
 	
 	 public static void main(String[] args) throws IOException {

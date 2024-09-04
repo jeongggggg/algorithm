@@ -11,13 +11,13 @@ import java.util.StringTokenizer;
 
 
 /*
-	10430. ³ª¸ÓÁö
-	(A+B)%C´Â ((A%C) + (B%C))%C ¿Í °°À»±î?
-	(A¡¿B)%C´Â ((A%C) ¡¿ (B%C))%C ¿Í °°À»±î?
-	¼¼ ¼ö A, B, C°¡ ÁÖ¾îÁ³À» ¶§, À§ÀÇ ³× °¡Áö °ªÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	10430. ë‚˜ë¨¸ì§€
+	(A+B)%CëŠ” ((A%C) + (B%C))%C ì™€ ê°™ì„ê¹Œ?
+	(AÃ—B)%CëŠ” ((A%C) Ã— (B%C))%C ì™€ ê°™ì„ê¹Œ?
+	ì„¸ ìˆ˜ A, B, Cê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ìœ„ì˜ ë„¤ ê°€ì§€ ê°’ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 */
 
-// Scanner »ç¿ë
+// Scanner ì‚¬ìš©
 public class step_01_09 {
 	
 	public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class step_01_09 {
 }
 	
 
-// BufferedReader »ç¿ë + StringTokenizer Å¬·¡½º¸¦ ÀÌ¿ëÇÏ¿© ºĞ¸®ÇØÁÖ´Â ¹æ¹ı
+// BufferedReader ì‚¬ìš© + StringTokenizer í´ë˜ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ë¶„ë¦¬í•´ì£¼ëŠ” ë°©ë²•
 class step_01_09_01 {
 	
 	public static void main(String[] args) throws IOException {
@@ -57,7 +57,7 @@ class step_01_09_01 {
 			System.out.println( (A%C * B%C)%C );
 		
  
-			// ±»ÀÌ String º¯¼ö »ı¼º ¾ÈÇÏ°í ÀÔ·Â°ú µ¿½Ã¿¡ ±¸ºĞÀÚ·Î ºĞ¸®ÇØÁàµµ µÊ.
+			// êµ³ì´ String ë³€ìˆ˜ ìƒì„± ì•ˆí•˜ê³  ì…ë ¥ê³¼ ë™ì‹œì— êµ¬ë¶„ìë¡œ ë¶„ë¦¬í•´ì¤˜ë„ ë¨.
 	 
 			BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
 			StringTokenizer st1 = new StringTokenizer(br1.readLine()," ");
@@ -72,7 +72,7 @@ class step_01_09_01 {
 	}
 }
 
-// BufferedReader »ç¿ë + br.readLine() À» ÅëÇØ ÀĞ¾î¿Â °ÍÀ» split(" ") ÇÏ¿© °ø¹é ´ÜÀ§·Î ³ª´²ÁØ µÚ String ¹è¿­¿¡ °¢°¢ ÀúÀåÇÏ´Â ¹æ¹ı
+// BufferedReader ì‚¬ìš© + br.readLine() ì„ í†µí•´ ì½ì–´ì˜¨ ê²ƒì„ split(" ") í•˜ì—¬ ê³µë°± ë‹¨ìœ„ë¡œ ë‚˜ëˆ ì¤€ ë’¤ String ë°°ì—´ì— ê°ê° ì €ì¥í•˜ëŠ” ë°©ë²•
 class step_01_09_02 {
 	
 	 public static void main(String[] args) throws IOException {
@@ -147,6 +147,3 @@ class step_01_09_04 {
 	 
 	} 
 }
-
-
-

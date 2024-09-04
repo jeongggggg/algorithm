@@ -1,20 +1,20 @@
 package baekjoon.step_by_step;
 import java.util.Scanner;
 /*
-	11654.¾Æ½ºÅ° ÄÚµå 
-	¾ËÆÄºª ¼Ò¹®ÀÚ, ´ë¹®ÀÚ, ¼ýÀÚ 0-9Áß ÇÏ³ª°¡ ÁÖ¾îÁ³À» ¶§, 
-	ÁÖ¾îÁø ±ÛÀÚÀÇ ¾Æ½ºÅ° ÄÚµå°ªÀ» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+	11654.ì•„ìŠ¤í‚¤ ì½”ë“œ 
+	ì•ŒíŒŒë²³ ì†Œë¬¸ìž, ëŒ€ë¬¸ìž, ìˆ«ìž 0-9ì¤‘ í•˜ë‚˜ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, 
+	ì£¼ì–´ì§„ ê¸€ìžì˜ ì•„ìŠ¤í‚¤ ì½”ë“œê°’ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 	
-	¾ËÆÄºª ¼Ò¹®ÀÚ, ´ë¹®ÀÚ, ¼ýÀÚ 0-9 Áß ÇÏ³ª°¡ Ã¹Â° ÁÙ¿¡ ÁÖ¾îÁø´Ù.
+	ì•ŒíŒŒë²³ ì†Œë¬¸ìž, ëŒ€ë¬¸ìž, ìˆ«ìž 0-9 ì¤‘ í•˜ë‚˜ê°€ ì²«ì§¸ ì¤„ì— ì£¼ì–´ì§„ë‹¤.
 	
-	ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø ±ÛÀÚÀÇ ¾Æ½ºÅ° ÄÚµå °ªÀ» Ãâ·ÂÇÑ´Ù.
+	ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ ê¸€ìžì˜ ì•„ìŠ¤í‚¤ ì½”ë“œ ê°’ì„ ì¶œë ¥í•œë‹¤.
 */
 
 /*
-	Scanner ¿¡´Â ¹®ÀÚ¸¦ ¹ÞÀ¸·Á¸é nextLine() ÀÌ³ª next() ¸¦ ÅëÇØ ¹®ÀÚ¿­·Î ÀÔ·Â¹Þ¾Æ¼­ charAt() À¸·Î ¹®ÀÚ·Î Àß¶ó³»ÁÖ¾î¾ß ÇÑ´Ù.
-	[ÀÔ·Â] String À¸·Î ÀÔ·Â¹Þ´Â´Ù.
-	-> [charAt()] String ¿¡¼­ char ·Î, Áï ¹®ÀÚ¿­À» Àß¶ó ¹®ÀÚ·Î º¯È¯ÇÑ´Ù.
-	-> int Å¸ÀÔ º¯¼ö¿¡ ÀúÀåÇÔÀ¸·Î½á ¹®ÀÚ¿¡ ´ëÀÀµÇ´Â °ª, Áï ¾Æ½ºÅ° ÄÚµå°ªÀ» ÀúÀåÇÑ´Ù.
+	Scanner ì—ëŠ” ë¬¸ìžë¥¼ ë°›ìœ¼ë ¤ë©´ nextLine() ì´ë‚˜ next() ë¥¼ í†µí•´ ë¬¸ìžì—´ë¡œ ìž…ë ¥ë°›ì•„ì„œ charAt() ìœ¼ë¡œ ë¬¸ìžë¡œ ìž˜ë¼ë‚´ì£¼ì–´ì•¼ í•œë‹¤.
+	[ìž…ë ¥] String ìœ¼ë¡œ ìž…ë ¥ë°›ëŠ”ë‹¤.
+	-> [charAt()] String ì—ì„œ char ë¡œ, ì¦‰ ë¬¸ìžì—´ì„ ìž˜ë¼ ë¬¸ìžë¡œ ë³€í™˜í•œë‹¤.
+	-> int íƒ€ìž… ë³€ìˆ˜ì— ì €ìž¥í•¨ìœ¼ë¡œì¨ ë¬¸ìžì— ëŒ€ì‘ë˜ëŠ” ê°’, ì¦‰ ì•„ìŠ¤í‚¤ ì½”ë“œê°’ì„ ì €ìž¥í•œë‹¤.
 */
 public class step_05_04 {
 
@@ -32,11 +32,11 @@ public class step_05_04 {
 }
 
 /*
-	Scanner ¸¦ ¾²Áö ¸»°í, °¡Àå ±âÃÊ ÀÔ·Â¹æ¹ýÀÎ System.in À» ¾²´Â ¹æ¹ý
-	System.in Àº byte °ªÀ¸·Î ¹®ÀÚ ÇÑ °³¸¸ ÀÐÀ¸¸é¼­ ÇØ´ç ¹®ÀÚ¿¡ ´ëÀÀµÇ´Â ¾Æ½ºÅ°ÄÚµå °ªÀ» ÀúÀåÇÒ ¼ö ÀÖ´Ù.
-	¹Ýµå½Ã ÁÖÀÇÇØ¾ß ÇÒ Á¡Àº ¿¹¿ÜÃ³¸®¸¦ ÇØÁÖ¾î¾ßÇÑ´Ù.
-	IOException (java.io ÆÐÅ°Áö¸¦ import ÇØ¾ßÇÔ) ·Î ¸ÞÀÎ ¿·¿¡ ½áÁÖ¾îµµ µÇ°í, 
-	Exception À¸·Î Ã³¸®ÇØµµ µÈ´Ù.
+	Scanner ë¥¼ ì“°ì§€ ë§ê³ , ê°€ìž¥ ê¸°ì´ˆ ìž…ë ¥ë°©ë²•ì¸ System.in ì„ ì“°ëŠ” ë°©ë²•
+	System.in ì€ byte ê°’ìœ¼ë¡œ ë¬¸ìž í•œ ê°œë§Œ ì½ìœ¼ë©´ì„œ í•´ë‹¹ ë¬¸ìžì— ëŒ€ì‘ë˜ëŠ” ì•„ìŠ¤í‚¤ì½”ë“œ ê°’ì„ ì €ìž¥í•  ìˆ˜ ìžˆë‹¤.
+	ë°˜ë“œì‹œ ì£¼ì˜í•´ì•¼ í•  ì ì€ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì£¼ì–´ì•¼í•œë‹¤.
+	IOException (java.io íŒ¨í‚¤ì§€ë¥¼ import í•´ì•¼í•¨) ë¡œ ë©”ì¸ ì˜†ì— ì¨ì£¼ì–´ë„ ë˜ê³ , 
+	Exception ìœ¼ë¡œ ì²˜ë¦¬í•´ë„ ëœë‹¤.
 */
 class step_05_04_01 {
 

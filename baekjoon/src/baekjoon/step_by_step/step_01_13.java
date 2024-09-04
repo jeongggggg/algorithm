@@ -5,8 +5,8 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 
 /*
-	10172. °³
-	¾Æ·¡ ¿¹Á¦¿Í °°ÀÌ °³¸¦ Ãâ·ÂÇÏ½Ã¿À.
+	10172. ê°œ
+	ì•„ë˜ ì˜ˆì œì™€ ê°™ì´ ê°œë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
 	|\_/|
 	|q p|   /}
 	( 0 )"""\
@@ -59,7 +59,7 @@ class step_01_13_03 {
  
  
 		bw.write("|\\_/|");
-		bw.newLine();	// ÁÙ ±¸ºĞÀÚ
+		bw.newLine();	// ì¤„ êµ¬ë¶„ì
         
 		bw.write("|q p|   /}");
 		bw.newLine();	

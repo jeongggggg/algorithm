@@ -7,4 +7,4 @@
 
 ***
 
-[![Velog Badge](http://img.shields.io/badge/Velog-white?style=flat-square&logo=Velog&link=https://velog.io/@dejeong/)](https://velog.io/@dejeong)
+[![Velog Badge](http://img.shields.io/badge/Velog-white?style=flat-square&logo=Velog&link=https://velog.io/@dejeong/)]([https://velog.io/@dejeong](https://velog.io/@dejeong/posts?tag=algorithm))

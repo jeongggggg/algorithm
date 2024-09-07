@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_03;
 
 // 문자열 섞기
 public class _181942 {

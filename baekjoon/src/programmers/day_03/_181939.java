@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_03;
 
 // 더 크게 합치기
 public class _181939 {

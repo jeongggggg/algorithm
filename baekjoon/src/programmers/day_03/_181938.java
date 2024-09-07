@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_03;
 
 // 두 수의 연산값 비교하기
 public class _181938 {

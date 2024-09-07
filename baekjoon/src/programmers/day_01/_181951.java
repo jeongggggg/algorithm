@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_01;
 import java.util.Scanner;
 
 // a와 b 출력하기

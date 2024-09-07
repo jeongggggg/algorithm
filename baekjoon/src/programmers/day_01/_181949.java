@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_01;
 import java.util.Scanner;
 
 // 대소문자 바꿔서 출력하기

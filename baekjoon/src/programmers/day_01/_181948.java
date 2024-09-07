@@ -1,5 +1,4 @@
-package programmers;
-import java.util.Scanner;
+package programmers.day_01;
 
 // 특수문자 출력하기
 public class _181948 {

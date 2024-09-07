@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_02;
 
 // 문자열 겹쳐쓰기
 public class _181943 {

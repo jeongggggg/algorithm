@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_02;
 import java.util.Scanner;
 
 // 문자열 붙여서 출력하기

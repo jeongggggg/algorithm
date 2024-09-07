@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_02;
 import java.util.Scanner;
 
 // 덧셈식 출력하기

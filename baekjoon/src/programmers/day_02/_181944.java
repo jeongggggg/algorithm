@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_02;
 import java.util.Scanner;
 
 // 홀짝 구분하기

@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_04;
 
 // 홀짝에 따라 다른 값 반환하기
 public class _181935 {

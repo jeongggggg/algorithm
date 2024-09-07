@@ -1,4 +1,4 @@
-package programmers;
+package programmers.day_04;
 
 // 조건 문자열
 public class _181934 {

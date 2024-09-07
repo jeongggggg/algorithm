@@ -1,4 +1,4 @@
-package category.stack;
+package baekjoon.category.stack;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package category.stack;
+package baekjoon.category.stack;
 
 public class Sample {
     public String solution(String my_string, String overwrite_string, int s) {

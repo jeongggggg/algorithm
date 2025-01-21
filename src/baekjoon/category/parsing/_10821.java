@@ -1,4 +1,4 @@
-package baekjoon.category.Parsing;
+package baekjoon.category.parsing;
 import java.util.Scanner;
 /*
     10821.정수의 개수

@@ -1,4 +1,4 @@
-package baekjoon.category.Sorting;
+package baekjoon.category.sorting;
 
 import java.util.Arrays;
 import java.util.Scanner;

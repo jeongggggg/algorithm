@@ -1,4 +1,4 @@
-package baekjoon.category.Stack;
+package baekjoon.category.stack;
 import java.util.ArrayList;
 import java.util.Scanner;
 /*
